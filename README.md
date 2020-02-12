@@ -4,3 +4,4 @@ IETI Card Game es un juego de cartas fantástico basado en los juegos estilo POK
 - Iker Fuentes Neira
 - Sergio de la Torre Rins
 - Alejandro Nieto Luque
+- Erik Cruz i Masana
