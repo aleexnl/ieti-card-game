@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE PlayerConfig SYSTEM "../config/IETI_Card_Game.DTD">
+
 <PlayerConfig>
 	<playerLife>10</playerLife>
 	<summonPointsPlayer>5</summonPointsPlayer>
 	<deck>
-		<card summonPoints='5' type='lancer'>
-		<name>El_Pincho</name>
-		<description>ppppppppppppppppppppppppppppppppppppppppppppppppppp</description>
-		<attack>5</attack>
-		<defense>0</defense>
-	</card>
-		<card summonPoints='5' type='chivalry'>
-			<name>Corceler</name>
-			<description>cccccccccccccccccccccccccccccccccccccccccccccccccc</description>
-			<attack>1</attack>
+		<card summonPoints="2" type='infantry'>
+			<name>Joseph Joestar</name>
+			<description>El poder especial de Hermit Purple, le permite a Joseph proyectar imágenes a distancia de personas, lugares y cosas de interés por medio de una fotografía.</description>
+			<attack>2</attack>
 			<defense>4</defense>
 		</card>
-		<card summonPoints='3' type='infantry'>
-			<name>Espado</name>
-			<description>eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</description>
-			<attack>1</attack>
+		<card summonPoints='4' type='lancer'>
+			<name>Jotaro Kujo</name>
+			<description>Su Stand, Star Platinum posee sentidos, fuerza, resistencia, precisión y velocidad sobre-humanos.</description>
+			<attack>5</attack>
+			<defense>4</defense>
+		</card>
+		<card summonPoints='1' type='infantry'>
+			<name>Noriaki Kakyoin</name>
+			<description>Kakyoin posee a Hierophant Green, un Stand humanoide de gran rango que es capaz de extender sus extremidades en forma de tentáculos y desenrollarse como una soga.</description>
+			<attack>3</attack>
 			<defense>2</defense>
 		</card>
-		<card summonPoints='5' type='lancer'>
-			<name>El_Pincho</name>
-			<description>ppppppppppppppppppppppppppppppppppppppppppppppppppp</description>
-			<attack>5</attack>
-			<defense>0</defense>
+		<card summonPoints='3' type='lancer'>
+			<name>Muhammad Avdol</name>
+			<description>El Stand humanoide de Avdol es Magician's Red; capaz de generar llamas extremadamente potentes aunque finamente controlados. </description>
+			<attack>4</attack>
+			<defense>2</defense>
 		</card>
-		<card summonPoints='5' type='chivalry'>
-			<name>Corceler</name>
-			<description>cccccccccccccccccccccccccccccccccccccccccccccccccc</description>
-			<attack>1</attack>
-			<defense>4</defense>
+		<card summonPoints='2' type='chivalry'>
+			<name>Jean Pierre Polnareff</name>
+			<description>Su Stand Silver Chariot tiene forma humanoide que lleva una armadura del estilo medieval que puede desprender para cuadruplicar su velocidad.</description>
+			<attack>5</attack>
+			<defense>1</defense>
 		</card>
 		<card summonPoints='3' type='infantry'>
 			<name>Espado</name>

@@ -5,11 +5,11 @@
 	<summonPointsPlayer>5</summonPointsPlayer>
 	<deck>
 		<card summonPoints='5' type='lancer'>
-		<name>El_Pincho</name>
-		<description>ppppppppppppppppppppppppppppppppppppppppppppppppppp</description>
-		<attack>5</attack>
-		<defense>0</defense>
-	</card>
+			<name>El_Pincho</name>
+			<description>ppppppppppppppppppppppppppppppppppppppppppppppppppp</description>
+			<attack>5</attack>
+			<defense>0</defense>
+		</card>
 		<card summonPoints='5' type='chivalry'>
 			<name>Corceler</name>
 			<description>cccccccccccccccccccccccccccccccccccccccccccccccccc</description>
