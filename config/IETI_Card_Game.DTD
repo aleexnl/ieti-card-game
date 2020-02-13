@@ -1,0 +1,11 @@
+<!ELEMENT PlayerConfig (playerLife, summonPointsPlayer, deck) >
+<!ELEMENT summonPointsPlayer (#PCDATA)>
+<!ELEMENT playerLife (#PCDATA)>
+<!ELEMENT deck (card)+>
+<!ELEMENT card (name, description, attack, defense)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT attack (#PCDATA)>
+<!ELEMENT defense (#PCDATA)>
+<!ATTLIST card summonPoints (0 | 1 | 2 | 3 | 4 | 5) #REQUIRED>
+<!ATTLIST card type (infantry | chivalry | lancer ) #REQUIRED>
