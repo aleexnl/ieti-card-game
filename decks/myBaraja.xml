@@ -65,36 +65,36 @@
 			<attack>1</attack>
 			<defense>3</defense>
 		</card>
-		<card summonPoints='5' type='chivalry'>
-			<name>Corceler</name>
-			<description>cccccccccccccccccccccccccccccccccccccccccccccccccc</description>
-			<attack>1</attack>
-			<defense>4</defense>
-		</card>
-		<card summonPoints='3' type='infantry'>
-			<name>Espado</name>
-			<description>eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</description>
-			<attack>1</attack>
-			<defense>2</defense>
-		</card>
 		<card summonPoints='5' type='lancer'>
-			<name>El_Pincho</name>
-			<description>ppppppppppppppppppppppppppppppppppppppppppppppppppp</description>
-			<attack>5</attack>
-			<defense>0</defense>
-		</card>
-		<card summonPoints='5' type='chivalry'>
-			<name>Corceler</name>
-			<description>cccccccccccccccccccccccccccccccccccccccccccccccccc</description>
-			<attack>1</attack>
-			<defense>4</defense>
-		</card>
-		<card summonPoints='3' type='infantry'>
-			<name>Espado</name>
-			<description>eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</description>
-			<attack>1</attack>
-			<defense>2</defense>
-		</card>
+            <name>Duende del oro</name>
+            <description>Duende que vive solo para llenar su saco de monedas de oro</description>
+            <attack>2</attack>
+            <defense>3</defense>
+        </card>
+        <card summonPoints='5' type='infantry'>
+            <name>Anton el Grandullon</name>
+            <description>Un noble gigante muy humilde con ganas de aplastar cosas</description>
+            <attack>1</attack>
+            <defense>4</defense>
+        </card>
+        <card summonPoints='5' type='lancer'>
+            <name>Ainara</name>
+            <description>La arquera magica del reino de la fantasia</description>
+            <attack>3</attack>
+            <defense>2</defense>
+        </card>
+        <card summonPoints='5' type='chivalry'>
+            <name>Julien</name>
+            <description>Principe del reino de Madagascar tiene un amor incondicionar hacia las hormigas</description>
+            <attack>2</attack>
+            <defense>3</defense>
+        </card>
+        <card summonPoints='5' type='infantry'>
+            <name>Javier</name>
+            <description>Troll defensor de los bosques del cuento de Pulgarcito</description>
+            <attack>1</attack>
+            <defense>4</defense>
+        </card>
 		<card summonPoints='5' type='lancer'>
 			<name>El_Pincho</name>
 			<description>ppppppppppppppppppppppppppppppppppppppppppppppppppp</description>
