@@ -7,31 +7,31 @@
 	<deck>
 		<card summonPoints="3" type='infantry'>
 			<name>Joseph Joestar</name>
-			<description>El poder especial de Hermit Purple, le permite a Joseph proyectar imágenes a distancia de personas, lugares y cosas de interés por medio de una fotografía.</description>
+			<description>¡Oh my God!</description>
 			<attack>1</attack>
 			<defense>2</defense>
 		</card>
 		<card summonPoints='5' type='lancer'>
 			<name>Jotaro Kujo</name>
-			<description>Su Stand, Star Platinum posee sentidos, fuerza, resistencia, precisión y velocidad sobre-humanos.</description>
+			<description>Yare Yare jiji</description>
 			<attack>3</attack>
 			<defense>2</defense>
 		</card>
 		<card summonPoints='4' type='infantry'>
 			<name>Noriaki Kakyoin</name>
-			<description>Kakyoin posee a Hierophant Green, un Stand humanoide de gran rango que es capaz de extender sus extremidades en forma de tentáculos y desenrollarse como una soga.</description>
+			<description>I'm Noriaki Kakyoin, and for the vengance of my friend...</description>
 			<attack>2</attack>
 			<defense>2</defense>
 		</card>
 		<card summonPoints='4' type='lancer'>
 			<name>Muhammad Avdol</name>
-			<description>El Stand humanoide de Avdol es Magician's Red; capaz de generar llamas extremadamente potentes aunque finamente controlados. </description>
+			<description>¡YES, I AM!</description>
 			<attack>4</attack>
 			<defense>0</defense>
 		</card>
 		<card summonPoints='5' type='chivalry'>
-			<name>Jean Pierre Polnareff</name>
-			<description>Su Stand Silver Chariot tiene forma humanoide que lleva una armadura del estilo medieval que puede desprender para cuadruplicar su velocidad.</description>
+			<name>Jean Pierre Polnaref</name>
+			<description>¡Shirubā Chariottsu!</description>
 			<attack>3</attack>
 			<defense>2</defense>
 		</card>
