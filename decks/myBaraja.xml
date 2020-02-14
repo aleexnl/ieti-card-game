@@ -35,35 +35,35 @@
 			<attack>5</attack>
 			<defense>1</defense>
 		</card>
-		<card summonPoints='3' type='infantry'>
-			<name>Espado</name>
-			<description>eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</description>
+		<card summonPoints='2' type='infantry'>
+			<name>Soldado Ryan</name>
+			<description>Soldado raso de gran valor y fortaleza interior, pese a sus pobres habilidades fisicas se esfuerza para darlo todo en el campo de batalla</description>
 			<attack>1</attack>
-			<defense>2</defense>
+			<defense>1</defense>
 		</card>
-		<card summonPoints='5' type='lancer'>
-			<name>El_Pincho</name>
-			<description>ppppppppppppppppppppppppppppppppppppppppppppppppppp</description>
+		<card summonPoints='5' type='infantry'>
+			<name>Glass Cannon</name>
+			<description>Un potente artilugio de combate con gran potencia de ataque y mucha fragilidad </description>
 			<attack>5</attack>
 			<defense>0</defense>
 		</card>
-		<card summonPoints='5' type='chivalry'>
-			<name>Corceler</name>
-			<description>cccccccccccccccccccccccccccccccccccccccccccccccccc</description>
-			<attack>1</attack>
-			<defense>4</defense>
+		<card summonPoints='3' type='lancer'>
+			<name>Escanor</name>
+			<description>Caballero del reino, que receibe su poder sobrehumano del sol</description>
+			<attack>2</attack>
+			<defense>1</defense>
 		</card>
-		<card summonPoints='3' type='infantry'>
-			<name>Espado</name>
-			<description>eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</description>
-			<attack>1</attack>
-			<defense>2</defense>
+		<card summonPoints='4' type='chivalry'>
+			<name>Lucky Luck</name>
+			<description>Su corcel y habilidades fisicas le proporcionan una buena defensa y capacidad esquiva</description>
+			<attack>3</attack>
+			<defense>1</defense>
 		</card>
-		<card summonPoints='5' type='lancer'>
-			<name>El_Pincho</name>
-			<description>ppppppppppppppppppppppppppppppppppppppppppppppppppp</description>
-			<attack>5</attack>
-			<defense>0</defense>
+		<card summonPoints='4' type='chivalry'>
+			<name>Marrano real</name>
+			<description>Un simple cerdo bendecido por la gracia de dios, entregado plenamente a defender su reino</description>
+			<attack>1</attack>
+			<defense>3</defense>
 		</card>
 		<card summonPoints='5' type='chivalry'>
 			<name>Corceler</name>
