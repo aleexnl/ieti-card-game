@@ -7,123 +7,123 @@
 	<deck>
 		<card summonPoints="3" type='infantry'>
 			<name>Joseph Joestar</name>
-			<description>¡Oh my God!</description>
+			<description>Aventurero intrepido. No huye, son retiradas estrategicas.</description>
 			<attack>1</attack>
 			<defense>2</defense>
 		</card>
 		<card summonPoints='5' type='lancer'>
 			<name>Jotaro Kujo</name>
-			<description>Yare Yare jiji</description>
+			<description>El y su traje han superado nombrosas aventuras.</description>
 			<attack>3</attack>
 			<defense>2</defense>
 		</card>
 		<card summonPoints='4' type='infantry'>
 			<name>Noriaki Kakyoin</name>
-			<description>I'm Noriaki Kakyoin, and for the vengance of my friend...</description>
+			<description>Llega a ser incomodo estar con el cuando come cerezas.</description>
 			<attack>2</attack>
 			<defense>2</defense>
 		</card>
 		<card summonPoints='4' type='lancer'>
 			<name>Muhammad Avdol</name>
-			<description>¡YES, I AM!</description>
+			<description>El adivino y gran amigo de Polnareff. Es muy inteligente.</description>
 			<attack>4</attack>
 			<defense>0</defense>
 		</card>
 		<card summonPoints='5' type='chivalry'>
 			<name>Jean Pierre Polnaref</name>
-			<description>¡Shirubā Chariottsu!</description>
+			<description>Si tienes un enemigo, seguro que lo encuentra antes que tu.</description>
 			<attack>3</attack>
 			<defense>2</defense>
 		</card>
 		<card summonPoints='2' type='infantry'>
 			<name>Soldado Ryan</name>
-			<description>Soldado raso de gran valor y fortaleza interior, pese a sus pobres habilidades fisicas se esfuerza para darlo todo en el campo de batalla</description>
+			<description>Soldado raso de gran valor y fortaleza interior.</description>
 			<attack>1</attack>
 			<defense>1</defense>
 		</card>
 		<card summonPoints='5' type='infantry'>
 			<name>Glass Cannon</name>
-			<description>Un potente artilugio de combate con gran potencia de ataque y mucha fragilidad </description>
+			<description>Artilugio de combate; gran potencia de ataque pero fragil.</description>
 			<attack>5</attack>
 			<defense>0</defense>
 		</card>
 		<card summonPoints='3' type='lancer'>
 			<name>Escanor</name>
-			<description>Caballero del reino, que receibe su poder sobrehumano del sol</description>
+			<description>Caballero del reino, receibe su poder sobrehumano del sol.</description>
 			<attack>2</attack>
 			<defense>1</defense>
 		</card>
 		<card summonPoints='4' type='chivalry'>
 			<name>Lucky Luck</name>
-			<description>Su corcel y habilidades fisicas le proporcionan una buena defensa y capacidad esquiva</description>
+			<description>¡Mas rapido que su sombra!</description>
 			<attack>3</attack>
 			<defense>1</defense>
 		</card>
 		<card summonPoints='4' type='chivalry'>
 			<name>Marrano real</name>
-			<description>Un simple cerdo bendecido por la gracia de dios, entregado plenamente a defender su reino</description>
+			<description>Cerdo bendecido por Dios, entregado plenamente a su reino.</description>
 			<attack>1</attack>
 			<defense>3</defense>
 		</card>
 		<card summonPoints='3' type='lancer'>
 			<name>Duende del oro</name>
-			<description>Duende que vive solo para llenar su saco de monedas de oro</description>
+			<description>Duende que vive solo para llenar su saco de monedas de oro.</description>
 			<attack>2</attack>
 			<defense>1</defense>
 		</card>
 		<card summonPoints='4' type='infantry'>
 			<name>Anton el Grandullon</name>
-			<description>Un noble gigante muy humilde con ganas de aplastar cosas</description>
+			<description>Un noble gigante muy humilde con ganas de aplastar cosas.</description>
 			<attack>2</attack>
 			<defense>2</defense>
 		</card>
 		<card summonPoints='1' type='lancer'>
 			<name>Ainara</name>
-			<description>La arquera magica del reino de la fantasia</description>
+			<description>La arquera magica del reino de la fantasia.</description>
 			<attack>1</attack>
 			<defense>0</defense>
 		</card>
 		<card summonPoints='3' type='chivalry'>
 			<name>Julien</name>
-			<description>Principe del reino de Madagascar tiene un amor incondicionar hacia las hormigas</description>
+			<description>Principe de Madagascar. Amor incondicional a las hormigas.</description>
 			<attack>1</attack>
 			<defense>2</defense>
 		</card>
 		<card summonPoints='5' type='infantry'>
 			<name>Javier</name>
-			<description>Troll defensor de los bosques del cuento de Pulgarcito</description>
+			<description>Troll defensor de los bosques del cuento de Pulgarcito.</description>
 			<attack>1</attack>
 			<defense>4</defense>
 		</card>
 		<card summonPoints='5' type='lancer'>
-			<name>El_Pincho</name>
-			<description>ppppppppppppppppppppppppppppppppppppppppppppppppppp</description>
-			<attack>5</attack>
-			<defense>0</defense>
+			<name>Dio Brando</name>
+			<description>Señor de los vampiros. Nadie puede resistir sus encantos.</description>
+			<attack>3</attack>
+			<defense>2</defense>
 		</card>
-		<card summonPoints='5' type='chivalry'>
-			<name>Corceler</name>
-			<description>cccccccccccccccccccccccccccccccccccccccccccccccccc</description>
-			<attack>1</attack>
-			<defense>4</defense>
+		<card summonPoints='4' type='chivalry'>
+			<name>Kars</name>
+			<description>Y como el dijo... ¡La victoria justifica cualquier medio!</description>
+			<attack>2</attack>
+			<defense>2</defense>
 		</card>
 		<card summonPoints='3' type='infantry'>
-			<name>Espado</name>
-			<description>eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</description>
+			<name>Wamuu</name>
+			<description>Guerrero orgulloso. Sirve a sus superiores Esidisi y Kars.</description>
+			<attack>2</attack>
+			<defense>1</defense>
+		</card>
+		<card summonPoints='3' type='lancer'>
+			<name>Esidisi</name>
+			<description>Es muy afable y actúa calmado la mayoría del tiempo.</description>
 			<attack>1</attack>
 			<defense>2</defense>
 		</card>
-		<card summonPoints='5' type='lancer'>
-			<name>El_Pincho</name>
-			<description>ppppppppppppppppppppppppppppppppppppppppppppppppppp</description>
-			<attack>5</attack>
-			<defense>0</defense>
-		</card>
 		<card summonPoints='5' type='chivalry'>
-			<name>Corceler</name>
-			<description>cccccccccccccccccccccccccccccccccccccccccccccccccc</description>
-			<attack>1</attack>
-			<defense>4</defense>
+			<name>Giorno Giovanna</name>
+			<description>Persona ambiciosa, Su meta es convertirse en un "Gangstar".</description>
+			<attack>3</attack>
+			<defense>2</defense>
 		</card>
 	</deck>
 </PlayerConfig>
