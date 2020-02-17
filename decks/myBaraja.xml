@@ -95,35 +95,44 @@
 			<attack>1</attack>
 			<defense>4</defense>
 		</card>
-		<card summonPoints='5' type='lancer'>
-			<name>Dio Brando</name>
-			<description>Señor de los vampiros. Nadie puede resistir sus encantos.</description>
-			<attack>3</attack>
-			<defense>2</defense>
-		</card>
-		<card summonPoints='4' type='chivalry'>
-			<name>Kars</name>
-			<description>Y como el dijo... ¡La victoria justifica cualquier medio!</description>
-			<attack>2</attack>
-			<defense>2</defense>
-		</card>
-		<card summonPoints='3' type='infantry'>
-			<name>Wamuu</name>
-			<description>Guerrero orgulloso. Sirve a sus superiores Esidisi y Kars.</description>
-			<attack>2</attack>
-			<defense>1</defense>
-		</card>
-		<card summonPoints='3' type='lancer'>
-			<name>Esidisi</name>
-			<description>Es muy afable y actúa calmado la mayoría del tiempo.</description>
-			<attack>1</attack>
-			<defense>2</defense>
-		</card>
-		<card summonPoints='5' type='chivalry'>
-			<name>Giorno Giovanna</name>
-			<description>Persona ambiciosa, Su meta es convertirse en un "Gangstar".</description>
-			<attack>3</attack>
-			<defense>2</defense>
-		</card>
+		<card summonPoints='4' type='lancer'>
+            <name>Saber</name>
+            <description>Es la heroína conocida como el Rey de los Caballeros</description>
+            <attack>3</attack>
+            <defense>1</defense>
+        </card>
+
+        <card summonPoints='5' type='lancer'>
+            <name>Archer</name>
+            <description>Su título se refiere a su habilidad con armas a distancia</description>
+            <attack>1</attack>
+            <defense>4</defense>
+        </card>
+
+        <card summonPoints='5' type='infantry'>
+            <name>Gilgamesh</name>
+            <description>El gran rey mitad-dios  mitad-humano</description>
+            <attack>4</attack>
+            <defense>1</defense>
+        </card>
+
+
+        <card summonPoints='5' type='chivalry'>
+            <name>Berserker</name>
+            <description>El héroe más grande de la mitología griega</description>
+            <attack>0</attack>
+            <defense>5</defense>
+        </card>
+
+
+        <card summonPoints='3' type='infantry'>
+            <name>Caster</name>
+            <description>Princesa que fue etiquetada como bruja en la mitología</description>
+            <attack>3</attack>
+            <defense>0</defense>
+        </card>
+
+
+
 	</deck>
 </PlayerConfig>
