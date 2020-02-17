@@ -1,4 +1,4 @@
-def inital_menu():
+def init_menu():
     print('1. Cargar cartas')
     print('2. Carga cartas Enemigo')
 
