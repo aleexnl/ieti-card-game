@@ -14,6 +14,8 @@ def charge_user_deck():
         user_deck = etree.parse('decks/myBaraja.xml')
     except OSError:
         print('ERROR:myBaraja.xml no encontrado en el directorio decks')
+    finally:
+        return user_deck
 # try:
 #     enemy_deck = etree.parse('decks/Enemigo.xml')
 # except OSError:
