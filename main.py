@@ -1,3 +1,4 @@
-from modules import menus
+from modules import menus, userinfo
 
 menus.inital_menu()
+
