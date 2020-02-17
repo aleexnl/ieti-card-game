@@ -2,7 +2,7 @@ from lxml import etree
 from lxml.etree import DTDParseError
 
 try:
-    dtd = etree.DTD('IETI_Card_Game.DTD')
+    dtd = etree.DTD('../config/IETI_Card_Game.DTD')
 except DTDParseError:
     print('ERROR: IETI_Card_Game.DTD no encontrado en el directorio config')
 try:
