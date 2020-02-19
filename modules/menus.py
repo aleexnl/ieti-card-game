@@ -3,7 +3,7 @@ from modules import userinfo
 dtd_file = userinfo.charge_dtd()
 
 
-# Definimos la funcion initial menu que nos mostrara por pantalla el primer menu que se le mostrara al usuario
+# Definimos la funcion initial menu que nos mostrara por pantalla el primer menu que se le mostrara al usuario.
 def inital_menu():
     while True:
         if userinfo.enemy_deck_charged or userinfo.user_deck_charged is True:
