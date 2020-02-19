@@ -1,11 +1,10 @@
 from modules import userinfo
-from modules.userinfo import charge_user_deck
-
+# Definimos la funcion initial menu que nos mostrara por pantalla el primer menu que se le mostrara al usuario
 def inital_menu():
     print('1. Cargar cartas')
     print('2. Carga cartas Enemigo')
 
-
+# Definimos una segunda variable que es el de cargar las cartas
 def charged_cards_menu():
     print('1. Cargar cartas')
     print('2. Carga cartas Enemigo')
@@ -22,15 +21,14 @@ def charged_cards_menu():
     print('13. Luchar Jugador vs Bot (liga)')
 
 
-def verifydeck():
-    verfy=userinfo.charge_user_deck()
-    if verfy == None:
-        try:
-            charged_cards_menu()
-            print("hola")
-        except UnboundLocalError:
-            print("ATENCIÓ:XML no carga correctamente")
-            inital_menu()
-    else:
-        charged_cards_menu()
+# La siguiente funcion creada verifica el mazo del usuario, si aparece un error al cargar el mazo printara un mensaje por pantalla
+#def verifydeck():
+#      try:
+#          inital_menu()
+#      except UnboundLocalError:
+#          print("ATENCIÓ:XML no carga correctamente")
+#      try:
+#          charged_cards_menu()
+#      except UnboundLocalError:
+#          print("ATENCIÓ:XML no carga correctamente")
 
