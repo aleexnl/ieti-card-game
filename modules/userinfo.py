@@ -30,6 +30,9 @@ def charge_user_deck(dtd):
         except NameError:
             print('ERROR: No ha sido posible validar myBaraja.xml')
             user_deck_charged = False
+        except AttributeError:
+            print('ERROR: No ha sido posible validar myBaraja.xml')
+            user_deck_charged = False
     except OSError:
         print('ERROR: myBaraja.xml no encontrado en el directorio decks')
 
@@ -45,6 +48,9 @@ def charge_enemy_deck(dtd):
                 print('INFO: Enemigo.xml validado correctamente')
                 return enemy_deck
         except NameError:
+            print('ERROR: No ha sido posible validar Enemigo.xml')
+            enemy_deck_charged = False
+        except AttributeError:
             print('ERROR: No ha sido posible validar Enemigo.xml')
             enemy_deck_charged = False
 
