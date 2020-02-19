@@ -10,4 +10,4 @@ IETI Card Game es un juego de cartas fantástico basado en los juegos estilo POK
 *Entrega 20/02/2020*
 - [x] Crear  ***miBaraja.xml*** de 20 cartas validado contra ***IETI_Card_Game.dtd***.
 - [ ] Impresión de menu en Python con las opciones especificadas.
-- [ ] Cargar cartas/Cargar cartas Enemigo y guardar en memoria.
+- [x] Cargar cartas/Cargar cartas Enemigo y guardar en memoria.

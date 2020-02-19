@@ -1,7 +1,18 @@
 from modules import userinfo
+
+
 def inital_menu():
-    print('1. Cargar cartas')
-    print('2. Carga cartas Enemigo')
+    while True:
+        print('1. Cargar cartas')
+        print('2. Carga cartas Enemigo')
+        print('3. Salir')
+        print('ESCOJE UNA OPCIÓN: ', end='')
+        try:
+            opc = int(input())
+            if opc not in range(1, 4):
+                print('ERROR: Introduce una opcion en el menu')
+        except ValueError:
+            print('ERROR: Solo introduce numeros')
 
 
 def charged_cards_menu():
