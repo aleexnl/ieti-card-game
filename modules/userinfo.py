@@ -1,14 +1,15 @@
+# De l'interpret lxml importem etree y despres de lxml.etree importem DTDParseError
 from lxml import etree
 from lxml.etree import DTDParseError
 
-
+# Esta funcion carga el DTD, si no lo consigue printara un mensaje de error.
 def charge_dtd():
     try:
         dtd = etree.DTD('config/IETI_Card_Game.DTD')
     except DTDParseError:
         print('ERROR: IETI_Card_Game.DTD no encontrado en el directorio config')
 
-
+# Esta funcion carga el XML, si no lo consigue printara un mensaje de error.
 def charge_user_deck():
     try:
         user_deck = etree.parse('decks/myBaraja.xml')
