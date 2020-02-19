@@ -4,17 +4,19 @@ from lxml.etree import DTDParseError
 
 def charge_dtd():
     try:
-        dtd = etree.DTD('../config/IETI_Card_Game.DTD')
+        dtd = etree.DTD('config/IETI_Card_Game.DTD')
         print('INFO: IETI_Card_Game.DTD cargado correctamente')
         dtd_charged = True
     except DTDParseError:
         print('ERROR: IETI_Card_Game.DTD no encontrado en el directorio config')
         dtd_charged = False
+    if dtd_charged is True:
+        return dtd
 
 
 def charge_user_deck(dtd):
     try:
-        user_deck = etree.parse('../decks/myBaraja.xml')
+        user_deck = etree.parse('decks/myBaraja.xml')
         user_deck_charged = True
     except OSError:
         print('ERROR: myBaraja.xml no encontrado en el directorio decks')
@@ -29,7 +31,7 @@ def charge_user_deck(dtd):
 
 def charge_enemy_deck(dtd):
     try:
-        enemy_deck = etree.parse('../decks/Enemigo.xml')
+        enemy_deck = etree.parse('decks/Enemigo.xml')
         enemy_deck_charged = True
     except OSError:
         print('ERROR: Enemigo.xml no encontrado en el directorio decks')
