@@ -1,17 +1,21 @@
 from lxml import etree
 from lxml.etree import DTDParseError
 
+# Creamos las variables globales y las pasamos a False
 dtd_charged = False
 user_deck_charged = False
 enemy_deck_charged = False
 
-
+# Definimos la funcion de cargar el DTD
 def charge_dtd():
+# Añadimos la variable global dtd_charged
     global dtd_charged
+# Hacemos un try y miramos si el dtd esta correcto, si lo esta pasamos la variable a True.
     try:
         dtd = etree.DTD('config/IETI_Card_Game.DTD')
         print('INFO: IETI_Card_Game.DTD cargado correctamente')
         dtd_charged = True
+#
     except DTDParseError:
         print('ERROR: IETI_Card_Game.DTD no encontrado en el directorio config')
     if dtd_charged is True:
