@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PlayerConfig SYSTEM "IETI_Card_Game.DTD">
+<PlayerConfig>
+    <playerLife>
+        10
+    </playerLife>
+    <summonPointsPlayer>
+        20
+    </summonPointsPlayer>
+    <deck>
+        <card summonPoints="3" type="infantry">
+            <name>
+                Sherri
+            </name>
+            <description>
+                Es la mejor de su division
+            </description>
+            <attack>
+                2
+            </attack>
+            <defense>
+                1
+            </defense>
+        </card>
+        <card summonPoints="4" type="infantry">
+            <name>
+                Jill
+            </name>
+            <description>
+                Siempre que dispara mata
+            </description>
+            <attack>
+                3
+            </attack>
+            <defense>
+                1
+            </defense>
+        </card>
+        <card summonPoints="5" type="infantry">
+            <name>
+                Leesa
+            </name>
+            <description>
+                Resiste en el frente enemigo
+            </description>
+            <attack>
+                3
+            </attack>
+            <defense>
+                2
+            </defense>
+        </card>
+        <card summonPoints="1" type="infantry">
+            <name>
+                Paul
+            </name>
+            <description>
+                Es un recluta
+            </description>
+            <attack>
+                1
+            </attack>
+            <defense>
+                0
+            </defense>
+        </card>
+        <card summonPoints="5" type="infantry">
+            <name>
+                Patrick
+            </name>
+            <description>
+                Mato a un batallon el solo
+            </description>
+            <attack>
+                5
+            </attack>
+            <defense>
+                0
+            </defense>
+        </card>
+        <card summonPoints="1" type="infantry">
+            <name>
+                Jose
+            </name>
+            <description>
+                Un recluta ejemplar
+            </description>
+            <attack>
+                1
+            </attack>
+            <defense>
+                0
+            </defense>
+        </card>
+        <card summonPoints="4" type="infantry">
+            <name>
+                Melbou
+            </name>
+            <description>
+                Lleva mucho tiempo luchando en el frente
+            </description>
+            <attack>
+                2
+            </attack>
+            <defense>
+                2
+            </defense>
+        </card>
+        <card summonPoints="3" type="chivalry">
+            <name>
+                Florian
+            </name>
+            <description>
+                Sobre su caballo se infiltra en las lineas enemigas
+            </description>
+            <attack>
+                3
+            </attack>
+            <defense>
+                0
+            </defense>
+        </card>
+        <card summonPoints="3" type="chivalry">
+            <name>
+                Damia
+            </name>
+            <description>
+                Ataca y mata a los desprevenidos
+            </description>
+            <attack>
+                2
+            </attack>
+            <defense>
+                1
+            </defense>
+        </card>
+        <card summonPoints="2" type="chivalry">
+            <name>
+                Ilve
+            </name>
+            <description>
+                Ilve es nueva en el terreno
+            </description>
+            <attack>
+                1
+            </attack>
+            <defense>
+                1
+            </defense>
+        </card>
+        <card summonPoints="5" type="chivalry">
+            <name>
+                Merlin
+            </name>
+            <description>
+                Siempre resiste a los ataques enemigos
+            </description>
+            <attack>
+                2
+            </attack>
+            <defense>
+                3
+            </defense>
+        </card>
+        <card summonPoints="3" type="chivalry">
+            <name>
+                Lewis
+            </name>
+            <description>
+                El quiere sobrevivir en el frente
+            </description>
+            <attack>
+                1
+            </attack>
+            <defense>
+                2
+            </defense>
+        </card>
+        <card summonPoints="5" type="chivalry">
+            <name>
+                Sean
+            </name>
+            <description>
+                El mas experimentado del equipo
+            </description>
+            <attack>
+                3
+            </attack>
+            <defense>
+                2
+            </defense>
+        </card>
+        <card summonPoints="1" type="lancer">
+            <name>
+                Cilinia
+            </name>
+            <description>
+                La mas novata
+            </description>
+            <attack>
+                1
+            </attack>
+            <defense>
+                0
+            </defense>
+        </card>
+        <card summonPoints="3" type="lancer">
+            <name>
+                Altea
+            </name>
+            <description>
+                El mas suertudo
+            </description>
+            <attack>
+                1
+            </attack>
+            <defense>
+                2
+            </defense>
+        </card>
+        <card summonPoints="4" type="lancer">
+            <name>
+                Solorio
+            </name>
+            <description>
+                Siempre va solo rodeando a los enemigos
+            </description>
+            <attack>
+                3
+            </attack>
+            <defense>
+                1
+            </defense>
+        </card>
+        <card summonPoints="5" type="lancer">
+            <name>
+                Lelica
+            </name>
+            <description>
+                Perfora las lineas enemigas
+            </description>
+            <attack>
+                4
+            </attack>
+            <defense>
+                1
+            </defense>
+        </card>
+        <card summonPoints="3" type="lancer">
+            <name>
+                Gaudencio
+            </name>
+            <description>
+                Rapido y ligero
+            </description>
+            <attack>
+                3
+            </attack>
+            <defense>
+                0
+            </defense>
+        </card>
+        <card summonPoints="4" type="lancer">
+            <name>
+                Quique
+            </name>
+            <description>
+                Tiene muy buena precision
+            </description>
+            <attack>
+                3
+            </attack>
+            <defense>
+                1
+            </defense>
+        </card>
+        <card summonPoints="2" type="lancer">
+            <name>
+                Edipo
+            </name>
+            <description>
+                El mas veloz
+            </description>
+            <attack>
+                2
+            </attack>
+            <defense>
+                0
+            </defense>
+        </card>
+    </deck>
+</PlayerConfig>
