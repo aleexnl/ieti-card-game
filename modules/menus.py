@@ -1,6 +1,5 @@
 from modules import userinfo
-
-
+# Definimos la funcion initial menu que nos mostrara por pantalla el primer menu que se le mostrara al usuario
 def inital_menu():
     while True:
         print('1. Cargar cartas')
@@ -14,7 +13,7 @@ def inital_menu():
         except ValueError:
             print('ERROR: Solo introduce numeros')
 
-
+# Definimos una segunda variable que es el de cargar las cartas
 def charged_cards_menu():
     print('1. Cargar cartas')
     print('2. Carga cartas Enemigo')
