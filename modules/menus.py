@@ -57,6 +57,28 @@ def all_menu():
             # Si el usuario printa 2 cargara el mazo del enemigo
             if opc == 2:
                 userinfo.charge_enemy_deck(dtd_file)
+            if opc == 3:
+                print('ERROR: Opción no disponible')
+            if opc == 4:
+                print('ERROR: Opción no disponible')
+            if opc == 5:
+                print('ERROR: Opción no disponible')
+            if opc == 6:
+                print('ERROR: Opción no disponible')
+            if opc == 7:
+                print('ERROR: Opción no disponible')
+            if opc == 8:
+                print('ERROR: Opción no disponible')
+            if opc == 9:
+                print('ERROR: Opción no disponible')
+            if opc == 10:
+                print('ERROR: Opción no disponible')
+            if opc == 11:
+                print('ERROR: Opción no disponible')
+            if opc == 12:
+                print('ERROR: Opción no disponible')
+            if opc == 13:
+                print('ERROR: Opción no disponible')
         # Si se introduce un valor que no sea un numero el programa printara un mensaje de error
         except ValueError:
             print('ERROR: Solo introduce numeros')
@@ -84,6 +106,14 @@ def user_deck_charged():
             # Si el usuario printa 2 cargara el mazo del enemigo
             if opc == 2:
                 userinfo.charge_enemy_deck(dtd_file)
+            if opc == 3:
+                print('ERROR: Opción no disponible')
+            if opc == 4:
+                print('ERROR: Opción no disponible')
+            if opc == 5:
+                print('ERROR: Opción no disponible')
+            if opc == 6:
+                print('ERROR: Opción no disponible')
         # Si se introduce un valor que no sea un numero el programa printara un mensaje de error
         except ValueError:
             print('ERROR: Solo introduce numeros')
@@ -111,6 +141,14 @@ def enemy_deck_charged():
             # Si el usuario printa 2 cargara el mazo del enemigo
             if opc == 2:
                 userinfo.charge_enemy_deck(dtd_file)
+            if opc == 3:
+                print('ERROR: Opción no disponible')
+            if opc == 4:
+                print('ERROR: Opción no disponible')
+            if opc == 5:
+                print('ERROR: Opción no disponible')
+            if opc == 6:
+                print('ERROR: Opción no disponible')
         # Si se introduce un valor que no sea un numero el programa printara un mensaje de error
         except ValueError:
             print('ERROR: Solo introduce numeros')
@@ -140,6 +178,22 @@ def all_decks_charged():
             # Si el usuario printa 2 cargara el mazo del enemigo
             if opc == 2:
                 userinfo.charge_enemy_deck(dtd_file)
+            if opc == 3:
+                print('ERROR: Opción no disponible')
+            if opc == 4:
+                print('ERROR: Opción no disponible')
+            if opc == 5:
+                print('ERROR: Opción no disponible')
+            if opc == 6:
+                print('ERROR: Opción no disponible')
+            if opc == 7:
+                print('ERROR: Opción no disponible')
+            if opc == 8:
+                print('ERROR: Opción no disponible')
+            if opc == 9:
+                print('ERROR: Opción no disponible')
+            if opc == 10:
+                print('ERROR: Opción no disponible')
         # Si se introduce un valor que no sea un numero el programa printara un mensaje de error
         except ValueError:
             print('ERROR: Solo introduce numeros')
