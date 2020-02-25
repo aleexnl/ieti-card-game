@@ -1,11 +1,15 @@
 # Importamos el archivo userinfo
-from modules import userinfo
+from modules import userinfo, card_decks
 
 dtd_file = userinfo.charge_dtd()
+user_deck = None
+enemy_deck = None
 
 
 # Definimos la funcion initial menu que nos mostrara por pantalla el primer menu que se le mostrara al usuario
 def inital_menu():
+    global user_deck
+    global enemy_deck
     while True:
         # Si el mazo del usuario y la del enemigo son True salimos del bucle y printamos el 1r menu.
         if userinfo.enemy_deck_charged or userinfo.user_deck_charged is True:
@@ -31,6 +35,8 @@ def inital_menu():
 
 # Esta funcion carga el menu entero
 def all_menu():
+    global user_deck
+    global enemy_deck
     while True:
         print('1. Cargar cartas')
         print('2. Carga cartas Enemigo')
@@ -54,9 +60,11 @@ def all_menu():
             # Si el usuario printa 1 cargara el mazo del usuario
             if opc == 1:
                 user_deck = userinfo.charge_user_deck(dtd_file)
+                return user_deck
             # Si el usuario printa 2 cargara el mazo del enemigo
             if opc == 2:
                 enemy_deck = userinfo.charge_enemy_deck(dtd_file)
+                return enemy_deck
             if opc == 3:
                 print('ERROR: Opción no disponible')
             if opc == 4:
@@ -83,8 +91,11 @@ def all_menu():
         except ValueError:
             print('ERROR: Solo introduce numeros')
 
+
 # La siguiente funcion cargara parte del menu que tiene relacion con la opcion 1, la de cargar cartas del usuario
 def user_deck_charged():
+    global user_deck
+    global enemy_deck
     while True:
         if userinfo.enemy_deck_charged is True:
             break
@@ -113,13 +124,16 @@ def user_deck_charged():
             if opc == 5:
                 print('ERROR: Opción no disponible')
             if opc == 6:
-                print('ERROR: Opción no disponible')
+                card_decks.balanced_deck(user_deck)
         # Si se introduce un valor que no sea un numero el programa printara un mensaje de error
         except ValueError:
             print('ERROR: Solo introduce numeros')
 
+
 # La siguiente funcion cargara parte del menu que tiene relacion con la opcion 2, la de cargar cartas enemigo
 def enemy_deck_charged():
+    global user_deck
+    global enemy_deck
     while True:
         if userinfo.user_deck_charged is True:
             break
@@ -153,8 +167,11 @@ def enemy_deck_charged():
         except ValueError:
             print('ERROR: Solo introduce numeros')
 
+
 # Esta ultima funcion carga solo las opciones del menu de cargar las cartas, no las de lucha
 def all_decks_charged():
+    global user_deck
+    global enemy_deck
     while True:
         print('1. Cargar cartas')
         print('2. Carga cartas Enemigo')
