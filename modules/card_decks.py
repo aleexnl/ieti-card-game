@@ -1,4 +1,6 @@
 def balanced_deck(user_deck):
-    r = user_deck.xpath('//name')
-    for i in range(len(r)):
-        print(r[i].text)
+    cards = user_deck.xpath('//card[1]//text()')
+    print(cards)
+    for card in range(len(cards)):
+        print('carta nº: ', card + 1)
+        print(cards[card])
