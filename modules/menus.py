@@ -124,7 +124,7 @@ def user_deck_charged():
             if opc == 5:
                 print('ERROR: Opción no disponible')
             if opc == 6:
-                card_decks.balanced_deck(user_deck)
+                print(card_decks.balanced_deck(user_deck))
         # Si se introduce un valor que no sea un numero el programa printara un mensaje de error
         except ValueError:
             print('ERROR: Solo introduce numeros')
