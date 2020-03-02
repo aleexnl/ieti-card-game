@@ -1,5 +1,5 @@
 # Importamos el archivo userinfo
-from modules import userinfo, card_decks
+from modules import userinfo, cards
 
 dtd_file = userinfo.charge_dtd()
 user_deck = None
@@ -118,13 +118,13 @@ def user_deck_charged():
             if opc == 2:
                 enemy_deck = userinfo.charge_enemy_deck(dtd_file)
             if opc == 3:
-                print('ERROR: Opción no disponible')
+                print(cards.random_deck(user_deck))
             if opc == 4:
                 print('ERROR: Opción no disponible')
             if opc == 5:
                 print('ERROR: Opción no disponible')
             if opc == 6:
-                print(card_decks.balanced_deck(user_deck))
+                print(cards.balanced_deck(user_deck))
         # Si se introduce un valor que no sea un numero el programa printara un mensaje de error
         except ValueError:
             print('ERROR: Solo introduce numeros')
