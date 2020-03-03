@@ -76,7 +76,7 @@ def all_menu():
             if opc == 6:
                 print('ERROR: Opción no disponible')
             if opc == 7:
-                print('ERROR: Opción no disponible')
+                enemy_active_deck = cards.random_deck(enemy_deck)
             if opc == 8:
                 print('ERROR: Opción no disponible')
             if opc == 9:
@@ -160,7 +160,7 @@ def enemy_deck_charged():
             if opc == 2:
                 enemy_deck = userinfo.charge_enemy_deck(dtd_file)
             if opc == 3:
-                print('ERROR: Opción no disponible')
+                enemy_active_deck = cards.random_deck(enemy_deck)
             if opc == 4:
                 print('ERROR: Opción no disponible')
             if opc == 5:
@@ -210,7 +210,7 @@ def all_decks_charged():
             if opc == 6:
                 print('ERROR: Opción no disponible')
             if opc == 7:
-                print('ERROR: Opción no disponible')
+                enemy_active_deck = cards.random_deck(enemy_deck)
             if opc == 8:
                 print('ERROR: Opción no disponible')
             if opc == 9:
