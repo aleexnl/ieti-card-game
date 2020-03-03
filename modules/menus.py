@@ -3,7 +3,9 @@ from modules import userinfo, cards
 
 dtd_file = userinfo.charge_dtd()
 user_deck = None
+user_active_deck = None
 enemy_deck = None
+enemy_active_deck = None
 
 
 # Definimos la funcion initial menu que nos mostrara por pantalla el primer menu que se le mostrara al usuario
@@ -37,6 +39,8 @@ def inital_menu():
 def all_menu():
     global user_deck
     global enemy_deck
+    global user_active_deck
+    global enemy_active_deck
     while True:
         print('1. Cargar cartas')
         print('2. Carga cartas Enemigo')
@@ -60,13 +64,11 @@ def all_menu():
             # Si el usuario printa 1 cargara el mazo del usuario
             if opc == 1:
                 user_deck = userinfo.charge_user_deck(dtd_file)
-                return user_deck
             # Si el usuario printa 2 cargara el mazo del enemigo
             if opc == 2:
                 enemy_deck = userinfo.charge_enemy_deck(dtd_file)
-                return enemy_deck
             if opc == 3:
-                print('ERROR: Opción no disponible')
+                user_active_deck = cards.random_deck(user_deck)
             if opc == 4:
                 print('ERROR: Opción no disponible')
             if opc == 5:
@@ -96,6 +98,7 @@ def all_menu():
 def user_deck_charged():
     global user_deck
     global enemy_deck
+    global user_active_deck
     while True:
         if userinfo.enemy_deck_charged is True:
             break
@@ -118,7 +121,7 @@ def user_deck_charged():
             if opc == 2:
                 enemy_deck = userinfo.charge_enemy_deck(dtd_file)
             if opc == 3:
-                print(cards.random_deck(user_deck))
+                user_active_deck = cards.random_deck(user_deck)
             if opc == 4:
                 print('ERROR: Opción no disponible')
             if opc == 5:
@@ -134,6 +137,7 @@ def user_deck_charged():
 def enemy_deck_charged():
     global user_deck
     global enemy_deck
+    global enemy_active_deck
     while True:
         if userinfo.user_deck_charged is True:
             break
@@ -172,6 +176,8 @@ def enemy_deck_charged():
 def all_decks_charged():
     global user_deck
     global enemy_deck
+    global user_active_deck
+    global enemy_active_deck
     while True:
         print('1. Cargar cartas')
         print('2. Carga cartas Enemigo')
@@ -196,7 +202,7 @@ def all_decks_charged():
             if opc == 2:
                 enemy_deck = userinfo.charge_enemy_deck(dtd_file)
             if opc == 3:
-                print('ERROR: Opción no disponible')
+                user_active_deck = cards.random_deck(user_deck)
             if opc == 4:
                 print('ERROR: Opción no disponible')
             if opc == 5:

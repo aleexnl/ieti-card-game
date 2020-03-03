@@ -3,7 +3,7 @@ from lxml import etree
 
 
 class Card:
-    def __init__(self, name, description, card_type, summon_points, attack, defense):
+    def __init__(self, summon_points, card_type, name, description, attack, defense):
         self.name = name
         self.description = description
         self.card_type = card_type
@@ -12,25 +12,28 @@ class Card:
         self.defense_points = defense
 
     def show_card(self):
-        print("{} costs {} summon points. Has {} attack and {} defense."
-              .format(self.name, self.summon_points, self.attack_points, self.defense_points))
-
-
-def balanced_deck(deck):
-    cards = deck.xpath('//name')
-    for card in range(len(cards)):
-        print('carta nº: ', card + 1)
-        print(cards[card].text)
-    # TODO: End balanced deck creator
+        print("Cost: {} Type: {} Name: {} Atk: {} Def: {}"
+              .format(self.summon_points, self.card_type, self.name
+                      , self.attack_points, self.defense_points))
 
 
 def random_deck(deck):
-    defined_deck = {}
+    cards = []
     random_numbers = []
     if deck.xpath('count(//name)') < 20:
         print('ERROR: No hay un minimo de 20 cartas.')
-        return defined_deck
+        return cards
     while len(random_numbers) != 10:
-        random_number = random.randint(0, deck.xpath('count(//name)'))
+        random_number = random.randint(1, deck.xpath('count(//name)'))
         if random_number not in random_numbers:
             random_numbers.append(random_number)
+    for number in random_numbers:
+        card_info = deck.xpath("//card[" + str(number) + "]")
+        name = deck.xpath("//card[" + str(number) + "]/name")
+        desc = deck.xpath("//card[" + str(number) + "]/description")
+        atk = deck.xpath("//card[" + str(number) + "]/attack")
+        defense = deck.xpath("//card[" + str(number) + "]/defense")
+        card = Card(card_info[0].get('summonPoints'), card_info[0].get('type')
+                    , name[0].text, desc[0].text, atk[0].text, defense[0].text)
+        cards.append(card)
+    return cards
