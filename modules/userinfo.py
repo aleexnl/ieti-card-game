@@ -58,7 +58,7 @@ def charge_enemy_deck(dtd):
     global enemy_deck_charged
     # Intentaremos cargar el mazo del usuario con este try y validarlo contra el dtd
     try:
-        # Comprobamos que la baraja enimiga cargue correctamente
+        # Comprobamos que la baraja enemiga cargue correctamente
         enemy_deck = etree.parse('decks/Enemigo.xml')
         enemy_deck_charged = True
         print('INFO: Enemigo.xml cargado correctamente')
