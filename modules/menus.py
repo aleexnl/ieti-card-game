@@ -123,7 +123,7 @@ def user_deck_charged():
             if opc == 3:
                 user_active_deck = cards.random_deck(user_deck)
             if opc == 4:
-                print('ERROR: Opción no disponible')
+                user_active_deck = cards.offensive_deck(user_deck)
             if opc == 5:
                 print('ERROR: Opción no disponible')
             if opc == 6:
