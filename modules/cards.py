@@ -51,6 +51,7 @@ def offensive_deck(deck):
             defense = card.xpath("defense")
             card = Card(card.get('summonPoints'), card.get('type'),
                         name[0].text, desc[0].text, atk[0].text, defense[0].text)
-            cards.append(card)
+            if len(cards)<10:
+                cards.append(card)
     for card in cards:
         card.show_card()
