@@ -3,13 +3,13 @@ from modules import userinfo, cards
 
 dtd_file = userinfo.charge_dtd()
 user_deck = None
-user_active_deck = None
+user_active_deck = []
 enemy_deck = None
-enemy_active_deck = None
+enemy_active_deck = []
 
 
 # Definimos la funcion initial menu que nos mostrara por pantalla el primer menu que se le mostrara al usuario
-def inital_menu():
+def init_menu():
     global user_deck
     global enemy_deck
     while True:
@@ -70,19 +70,19 @@ def all_menu():
             if opc == 3:
                 user_active_deck = cards.random_deck(user_deck)
             if opc == 4:
-                print('ERROR: Opción no disponible')
+                user_active_deck = cards.offensive_deck(user_deck)
             if opc == 5:
-                print('ERROR: Opción no disponible')
+                user_active_deck = cards.defensive_deck(user_deck)
             if opc == 6:
-                print('ERROR: Opción no disponible')
+                user_active_deck = cards.balanced_deck(user_deck)
             if opc == 7:
                 enemy_active_deck = cards.random_deck(enemy_deck)
             if opc == 8:
-                print('ERROR: Opción no disponible')
+                enemy_active_deck = cards.offensive_deck(enemy_deck)
             if opc == 9:
-                print('ERROR: Opción no disponible')
+                enemy_active_deck = cards.defensive_deck(enemy_deck)
             if opc == 10:
-                print('ERROR: Opción no disponible')
+                enemy_active_deck = cards.balanced_deck(enemy_deck)
             if opc == 11:
                 print('ERROR: Opción no disponible')
             if opc == 12:
@@ -127,7 +127,7 @@ def user_deck_charged():
             if opc == 5:
                 user_active_deck = cards.defensive_deck(user_deck)
             if opc == 6:
-                print(cards.balanced_deck(user_deck))
+                user_active_deck = cards.balanced_deck(user_deck)
         # Si se introduce un valor que no sea un numero el programa printara un mensaje de error
         except ValueError:
             print('ERROR: Solo introduce numeros')
@@ -162,11 +162,11 @@ def enemy_deck_charged():
             if opc == 3:
                 enemy_active_deck = cards.random_deck(enemy_deck)
             if opc == 4:
-                print('ERROR: Opción no disponible')
+                enemy_active_deck = cards.offensive_deck(enemy_deck)
             if opc == 5:
-                print('ERROR: Opción no disponible')
+                enemy_active_deck = cards.defensive_deck(enemy_deck)
             if opc == 6:
-                print('ERROR: Opción no disponible')
+                enemy_active_deck = cards.balanced_deck(enemy_deck)
         # Si se introduce un valor que no sea un numero el programa printara un mensaje de error
         except ValueError:
             print('ERROR: Solo introduce numeros')
@@ -204,19 +204,19 @@ def all_decks_charged():
             if opc == 3:
                 user_active_deck = cards.random_deck(user_deck)
             if opc == 4:
-                print('ERROR: Opción no disponible')
+                user_active_deck = cards.offensive_deck(user_deck)
             if opc == 5:
-                print('ERROR: Opción no disponible')
+                user_active_deck = cards.defensive_deck(user_deck)
             if opc == 6:
-                print('ERROR: Opción no disponible')
+                user_active_deck = cards.balanced_deck(user_deck)
             if opc == 7:
                 enemy_active_deck = cards.random_deck(enemy_deck)
             if opc == 8:
-                print('ERROR: Opción no disponible')
+                enemy_active_deck = cards.offensive_deck(enemy_deck)
             if opc == 9:
-                print('ERROR: Opción no disponible')
+                enemy_active_deck = cards.defensive_deck(enemy_deck)
             if opc == 10:
-                print('ERROR: Opción no disponible')
+                enemy_active_deck = cards.balanced_deck(enemy_deck)
         # Si se introduce un valor que no sea un numero el programa printara un mensaje de error
         except ValueError:
             print('ERROR: Solo introduce numeros')
