@@ -54,8 +54,8 @@ def offensive_deck(deck):
         print('ERROR: No hay un minimo de 20 cartas.')
         return cards
     for attack in range(5, -1, -1):
-        selected_card = deck.xpath('/PlayerConfig/deck/card[attack[.=' + str(attack) + ']]')
-        for card in selected_card:
+        selected_cards = deck.xpath('/PlayerConfig/deck/card[attack[.=' + str(attack) + ']]')
+        for card in selected_cards:
             if len(cards) == 10:
                 return cards
             name = card.xpath("name")
@@ -73,8 +73,8 @@ def defensive_deck(deck):
         print('ERROR: No hay un minimo de 20 cartas.')
         return cards
     for defense in range(5, -1, -1):
-        selected_card = deck.xpath('/PlayerConfig/deck/card[defense[.=' + str(defense) + ']]')
-        for card in selected_card:
+        selected_cards = deck.xpath('/PlayerConfig/deck/card[defense[.=' + str(defense) + ']]')
+        for card in selected_cards:
             if len(cards) == 10:
                 return cards
             name = card.xpath("name")
@@ -91,13 +91,17 @@ def balanced_deck(deck):
     if deck.xpath('count(//name)') < 20:
         print('ERROR: No hay un minimo de 20 cartas.')
         return cards
-    # /PlayerConfig/deck/card[number(attack)-number(defense)=1]
-    selected_cards = deck.xpath('/PlayerConfig/deck/card[number(attack)-number(defense)=my_abs(4)]')
-    for card in selected_cards:
-        name = card.xpath("name")
-        desc = card.xpath("description")
-        atk = card.xpath("attack")
-        defense = card.xpath("defense")
-        card = Card(card.get('summonPoints'), card.get('type'),
-                    name[0].text, desc[0].text, atk[0].text, defense[0].text)
-        card.show_card()
+    for number in range(0, 6, 1):
+        selected_cards = deck.xpath('/PlayerConfig/deck/card'
+                                    '[my_abs(number(attack)-number(defense))=' + str(number) + ']')
+        for card in selected_cards:
+            if len(cards) == 10:
+                return cards
+            name = card.xpath("name")
+            desc = card.xpath("description")
+            atk = card.xpath("attack")
+            defense = card.xpath("defense")
+            card = Card(card.get('summonPoints'), card.get('type'),
+                        name[0].text, desc[0].text, atk[0].text, defense[0].text)
+            card.show_card()
+            cards.append(card)

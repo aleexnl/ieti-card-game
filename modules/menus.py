@@ -74,7 +74,7 @@ def all_menu():
             if opc == 5:
                 user_active_deck = cards.defensive_deck(user_deck)
             if opc == 6:
-                print('ERROR: Opción no disponible')
+                user_active_deck = cards.balanced_deck(user_deck)
             if opc == 7:
                 enemy_active_deck = cards.random_deck(enemy_deck)
             if opc == 8:
@@ -82,7 +82,7 @@ def all_menu():
             if opc == 9:
                 enemy_active_deck = cards.defensive_deck(enemy_deck)
             if opc == 10:
-                print('ERROR: Opción no disponible')
+                enemy_active_deck = cards.balanced_deck(enemy_deck)
             if opc == 11:
                 print('ERROR: Opción no disponible')
             if opc == 12:
@@ -166,7 +166,7 @@ def enemy_deck_charged():
             if opc == 5:
                 enemy_active_deck = cards.defensive_deck(enemy_deck)
             if opc == 6:
-                print('ERROR: Opción no disponible')
+                enemy_active_deck = cards.balanced_deck(enemy_deck)
         # Si se introduce un valor que no sea un numero el programa printara un mensaje de error
         except ValueError:
             print('ERROR: Solo introduce numeros')
@@ -208,7 +208,7 @@ def all_decks_charged():
             if opc == 5:
                 user_active_deck = cards.defensive_deck(user_deck)
             if opc == 6:
-                print('ERROR: Opción no disponible')
+                user_active_deck = cards.balanced_deck(user_deck)
             if opc == 7:
                 enemy_active_deck = cards.random_deck(enemy_deck)
             if opc == 8:
@@ -216,7 +216,7 @@ def all_decks_charged():
             if opc == 9:
                 enemy_active_deck = cards.defensive_deck(enemy_deck)
             if opc == 10:
-                print('ERROR: Opción no disponible')
+                enemy_active_deck = cards.balanced_deck(enemy_deck)
         # Si se introduce un valor que no sea un numero el programa printara un mensaje de error
         except ValueError:
             print('ERROR: Solo introduce numeros')
