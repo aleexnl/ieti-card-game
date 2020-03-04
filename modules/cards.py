@@ -46,6 +46,7 @@ def random_deck(deck):  # Function to create a random deck.
         defense = deck.xpath("//card[" + str(number) + "]/defense")
         card = Card(card_info[0].get('summonPoints'), card_info[0].get('type'),
                     name[0].text, desc[0].text, atk[0].text, defense[0].text)
+        card.show_card()
         cards.append(card)
     return cards
 
@@ -67,6 +68,7 @@ def offensive_deck(deck):  # Function to create a offensive deck.
             defense = card.xpath("defense")
             card = Card(card.get('summonPoints'), card.get('type'),
                         name[0].text, desc[0].text, atk[0].text, defense[0].text)
+            card.show_card()
             cards.append(card)
 
 
@@ -87,6 +89,7 @@ def defensive_deck(deck):  # Function to create a defensive deck.
             defense = card.xpath("defense")
             card = Card(card.get('summonPoints'), card.get('type'),
                         name[0].text, desc[0].text, atk[0].text, defense[0].text)
+            card.show_card()
             cards.append(card)
 
 
@@ -111,4 +114,5 @@ def balanced_deck(deck):  # Function to create balanced decks
             defense = card.xpath("defense")
             card = Card(card.get('summonPoints'), card.get('type'),
                         name[0].text, desc[0].text, atk[0].text, defense[0].text)
+            card.show_card()
             cards.append(card)
