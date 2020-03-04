@@ -3,7 +3,7 @@ from modules import menus, userinfo
 
 while True:
     if userinfo.user_deck_charged is False and userinfo.enemy_deck_charged is False:
-        menus.inital_menu()
+        menus.init_menu()
     # Comprobamos que ninguno de los dos mazos este cargado, y mostramos por pantalla el primer menu que permite cargar
     # ambos mazos
     elif userinfo.user_deck_charged is True and userinfo.enemy_deck_charged is False:
