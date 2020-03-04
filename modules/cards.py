@@ -1,4 +1,7 @@
 import random
+from lxml import etree
+
+ns = etree.FunctionNamespace(None)
 
 
 class Card:
@@ -13,6 +16,14 @@ class Card:
     def show_card(self):
         print("Cost: {} Type: {} Name: {} Atk: {} Def: {}"
               .format(self.summon_points, self.card_type, self.name, self.attack_points, self.defense_points))
+
+
+@ns
+def my_abs(context, number):
+    if number < 0:
+        return number * -1
+    else:
+        return number
 
 
 def random_deck(deck):
@@ -73,3 +84,20 @@ def defensive_deck(deck):
             card = Card(card.get('summonPoints'), card.get('type'),
                         name[0].text, desc[0].text, atk[0].text, defense[0].text)
             cards.append(card)
+
+
+def balanced_deck(deck):
+    cards = []
+    if deck.xpath('count(//name)') < 20:
+        print('ERROR: No hay un minimo de 20 cartas.')
+        return cards
+    # /PlayerConfig/deck/card[number(attack)-number(defense)=1]
+    selected_cards = deck.xpath('/PlayerConfig/deck/card[number(attack)-number(defense)=my_abs(4)]')
+    for card in selected_cards:
+        name = card.xpath("name")
+        desc = card.xpath("description")
+        atk = card.xpath("attack")
+        defense = card.xpath("defense")
+        card = Card(card.get('summonPoints'), card.get('type'),
+                    name[0].text, desc[0].text, atk[0].text, defense[0].text)
+        card.show_card()
