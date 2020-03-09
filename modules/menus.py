@@ -25,11 +25,13 @@ def init_menu():
             if opc not in range(1, 3):
                 print('ERROR: Introduce una opcion en el menu')
             # Si el usuario printa 1 cargara el mazo del usuario
-            if opc == 1:
+            elif opc == 1:
                 user_deck = userinfo.charge_deck(dtd_file, user='user')
             # Si el usuario printa 2 cargara el mazo del enemigo
-            if opc == 2:
+            elif opc == 2:
                 enemy_deck = userinfo.charge_deck(dtd_file, user='enemy')
+            else:
+                print('ERROR: Seleccion no esperada. Contacta con el desarrollador.')
         # Si se introduce un valor que no sea un numero el programa printara un mensaje de error
         except ValueError:
             print('ERROR: Solo introduce numeros')
@@ -62,33 +64,35 @@ def all_menu():
             if opc not in range(1, 14):
                 print('ERROR: Introduce una opcion en el menu')
             # Si el usuario printa 1 cargara el mazo del usuario
-            if opc == 1:
+            elif opc == 1:
                 user_deck = userinfo.charge_deck(dtd_file, user='user')
             # Si el usuario printa 2 cargara el mazo del enemigo
-            if opc == 2:
+            elif opc == 2:
                 enemy_deck = userinfo.charge_deck(dtd_file, user='enemy')
-            if opc == 3:
+            elif opc == 3:
                 user_active_deck = cards.random_deck(user_deck)
-            if opc == 4:
+            elif opc == 4:
                 user_active_deck = cards.offensive_deck(user_deck)
-            if opc == 5:
+            elif opc == 5:
                 user_active_deck = cards.defensive_deck(user_deck)
-            if opc == 6:
+            elif opc == 6:
                 user_active_deck = cards.balanced_deck(user_deck)
-            if opc == 7:
+            elif opc == 7:
                 enemy_active_deck = cards.random_deck(enemy_deck)
-            if opc == 8:
+            elif opc == 8:
                 enemy_active_deck = cards.offensive_deck(enemy_deck)
-            if opc == 9:
+            elif opc == 9:
                 enemy_active_deck = cards.defensive_deck(enemy_deck)
-            if opc == 10:
+            elif opc == 10:
                 enemy_active_deck = cards.balanced_deck(enemy_deck)
-            if opc == 11:
+            elif opc == 11:
                 print('ERROR: Opción no disponible')
-            if opc == 12:
+            elif opc == 12:
                 print('ERROR: Opción no disponible')
-            if opc == 13:
+            elif opc == 13:
                 print('ERROR: Opción no disponible')
+            else:
+                print('ERROR: Seleccion no esperada. Contacta con el desarrollador.')
         # Si se introduce un valor que no sea un numero el programa printara un mensaje de error
         except ValueError:
             print('ERROR: Solo introduce numeros')
@@ -115,19 +119,21 @@ def user_deck_charged():
             if opc not in range(1, 7):
                 print('ERROR: Introduce una opcion en el menu')
             # Si el usuario printa 1 cargara el mazo del usuario
-            if opc == 1:
+            elif opc == 1:
                 user_deck = userinfo.charge_deck(dtd_file, user='user')
             # Si el usuario printa 2 cargara el mazo del enemigo
-            if opc == 2:
+            elif opc == 2:
                 enemy_deck = userinfo.charge_deck(dtd_file, user='enemy')
-            if opc == 3:
+            elif opc == 3:
                 user_active_deck = cards.random_deck(user_deck)
-            if opc == 4:
+            elif opc == 4:
                 user_active_deck = cards.offensive_deck(user_deck)
-            if opc == 5:
+            elif opc == 5:
                 user_active_deck = cards.defensive_deck(user_deck)
-            if opc == 6:
+            elif opc == 6:
                 user_active_deck = cards.balanced_deck(user_deck)
+            else:
+                print('ERROR: Seleccion no esperada. Contacta con el desarrollador.')
         # Si se introduce un valor que no sea un numero el programa printara un mensaje de error
         except ValueError:
             print('ERROR: Solo introduce numeros')
@@ -154,19 +160,21 @@ def enemy_deck_charged():
             if opc not in range(1, 7):
                 print('ERROR: Introduce una opcion en el menu')
             # Si el usuario printa 1 cargara el mazo del usuario
-            if opc == 1:
+            elif opc == 1:
                 user_deck = userinfo.charge_deck(dtd_file, user='user')
             # Si el usuario printa 2 cargara el mazo del enemigo
-            if opc == 2:
+            elif opc == 2:
                 enemy_deck = userinfo.charge_deck(dtd_file, user='enemy')
-            if opc == 3:
+            elif opc == 3:
                 enemy_active_deck = cards.random_deck(enemy_deck)
-            if opc == 4:
+            elif opc == 4:
                 enemy_active_deck = cards.offensive_deck(enemy_deck)
-            if opc == 5:
+            elif opc == 5:
                 enemy_active_deck = cards.defensive_deck(enemy_deck)
-            if opc == 6:
+            elif opc == 6:
                 enemy_active_deck = cards.balanced_deck(enemy_deck)
+            else:
+                print('ERROR: Seleccion no esperada. Contacta con el desarrollador.')
         # Si se introduce un valor que no sea un numero el programa printara un mensaje de error
         except ValueError:
             print('ERROR: Solo introduce numeros')
@@ -195,28 +203,28 @@ def all_decks_charged():
             opc = int(input())
             if opc not in range(1, 11):
                 print('ERROR: Introduce una opcion en el menu')
-            # Si el usuario printa 1 cargara el mazo del usuario
-            if opc == 1:
+            elif opc == 1:
                 user_deck = userinfo.charge_deck(dtd_file, user='user')
-            # Si el usuario printa 2 cargara el mazo del enemigo
-            if opc == 2:
+            elif opc == 2:
                 enemy_deck = userinfo.charge_deck(dtd_file, user='enemy')
-            if opc == 3:
+            elif opc == 3:
                 user_active_deck = cards.random_deck(user_deck)
-            if opc == 4:
+            elif opc == 4:
                 user_active_deck = cards.offensive_deck(user_deck)
-            if opc == 5:
+            elif opc == 5:
                 user_active_deck = cards.defensive_deck(user_deck)
-            if opc == 6:
+            elif opc == 6:
                 user_active_deck = cards.balanced_deck(user_deck)
-            if opc == 7:
+            elif opc == 7:
                 enemy_active_deck = cards.random_deck(enemy_deck)
-            if opc == 8:
+            elif opc == 8:
                 enemy_active_deck = cards.offensive_deck(enemy_deck)
-            if opc == 9:
+            elif opc == 9:
                 enemy_active_deck = cards.defensive_deck(enemy_deck)
-            if opc == 10:
+            elif opc == 10:
                 enemy_active_deck = cards.balanced_deck(enemy_deck)
+            else:
+                print('ERROR: Seleccion no esperada. Contacta con el desarrollador.')
         # Si se introduce un valor que no sea un numero el programa printara un mensaje de error
         except ValueError:
             print('ERROR: Solo introduce numeros')
