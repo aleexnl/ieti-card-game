@@ -26,10 +26,10 @@ def init_menu():
                 print('ERROR: Introduce una opcion en el menu')
             # Si el usuario printa 1 cargara el mazo del usuario
             if opc == 1:
-                user_deck = userinfo.charge_user_deck(dtd_file)
+                user_deck = userinfo.charge_deck(dtd_file, user='user')
             # Si el usuario printa 2 cargara el mazo del enemigo
             if opc == 2:
-                enemy_deck = userinfo.charge_enemy_deck(dtd_file)
+                enemy_deck = userinfo.charge_deck(dtd_file, user='enemy')
         # Si se introduce un valor que no sea un numero el programa printara un mensaje de error
         except ValueError:
             print('ERROR: Solo introduce numeros')
@@ -63,10 +63,10 @@ def all_menu():
                 print('ERROR: Introduce una opcion en el menu')
             # Si el usuario printa 1 cargara el mazo del usuario
             if opc == 1:
-                user_deck = userinfo.charge_user_deck(dtd_file)
+                user_deck = userinfo.charge_deck(dtd_file, user='user')
             # Si el usuario printa 2 cargara el mazo del enemigo
             if opc == 2:
-                enemy_deck = userinfo.charge_enemy_deck(dtd_file)
+                enemy_deck = userinfo.charge_deck(dtd_file, user='enemy')
             if opc == 3:
                 user_active_deck = cards.random_deck(user_deck)
             if opc == 4:
@@ -116,10 +116,10 @@ def user_deck_charged():
                 print('ERROR: Introduce una opcion en el menu')
             # Si el usuario printa 1 cargara el mazo del usuario
             if opc == 1:
-                user_deck = userinfo.charge_user_deck(dtd_file)
+                user_deck = userinfo.charge_deck(dtd_file, user='user')
             # Si el usuario printa 2 cargara el mazo del enemigo
             if opc == 2:
-                enemy_deck = userinfo.charge_enemy_deck(dtd_file)
+                enemy_deck = userinfo.charge_deck(dtd_file, user='enemy')
             if opc == 3:
                 user_active_deck = cards.random_deck(user_deck)
             if opc == 4:
@@ -155,10 +155,10 @@ def enemy_deck_charged():
                 print('ERROR: Introduce una opcion en el menu')
             # Si el usuario printa 1 cargara el mazo del usuario
             if opc == 1:
-                user_deck = userinfo.charge_user_deck(dtd_file)
+                user_deck = userinfo.charge_deck(dtd_file, user='user')
             # Si el usuario printa 2 cargara el mazo del enemigo
             if opc == 2:
-                enemy_deck = userinfo.charge_enemy_deck(dtd_file)
+                enemy_deck = userinfo.charge_deck(dtd_file, user='enemy')
             if opc == 3:
                 enemy_active_deck = cards.random_deck(enemy_deck)
             if opc == 4:
@@ -197,10 +197,10 @@ def all_decks_charged():
                 print('ERROR: Introduce una opcion en el menu')
             # Si el usuario printa 1 cargara el mazo del usuario
             if opc == 1:
-                user_deck = userinfo.charge_user_deck(dtd_file)
+                user_deck = userinfo.charge_deck(dtd_file, user='user')
             # Si el usuario printa 2 cargara el mazo del enemigo
             if opc == 2:
-                enemy_deck = userinfo.charge_enemy_deck(dtd_file)
+                enemy_deck = userinfo.charge_deck(dtd_file, user='enemy')
             if opc == 3:
                 user_active_deck = cards.random_deck(user_deck)
             if opc == 4:
