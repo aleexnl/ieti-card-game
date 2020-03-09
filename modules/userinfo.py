@@ -17,7 +17,7 @@ def charge_dtd():  # Function used to charge the xml dtd validator.
     except DTDParseError:
         print('ERROR: IETI_Card_Game.DTD no encontrado en el directorio config')
 
-
+# TODO: Optimize function with 1 more argument: enemy or ally.
 def charge_deck(dtd, user):
     try:
         if user == 'user':
