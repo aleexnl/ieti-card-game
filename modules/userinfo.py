@@ -1,81 +1,62 @@
-#  Importamos API para parsear el fitxero dtd y xml.
 from lxml import etree
 from lxml.etree import DTDParseError
-#  dtd_charged la utilizamos para comprobar si esta cargado el dtd.
-dtd_charged = False
-#  user_deck_charged la utilizamos para comprobar si esta cargada la baraja del usuario.
-user_deck_charged = False
-#  enemy_deck_charged la utilizamos para comprobar si esta cargada la baraja enemiga.
-enemy_deck_charged = False
+
+dtd_charged = False  # Global boolean to check if the validation dtd is successful charged in memory.
+user_deck_charged = False  # Global boolean to check if the user xml is successful charged in memory.
+enemy_deck_charged = False  # Global boolean to check if the enemy xml is successful charged in memory.
 
 
-# La función intenta cargar el dtd.
-def charge_dtd():
-    #  Cargamos una variable en estado global
-    global dtd_charged
-    #  Si el dtd carga y es correcto devolvemos el dtd
+def charge_dtd():  # Function used to charge the xml dtd validator.
+    global dtd_charged  # Charge the global variable to change its condition .
+    # Try to charge the dtd, if not it will catch the exception and warn the user about.
     try:
         dtd = etree.DTD('config/IETI_Card_Game.DTD')
         print('INFO: IETI_Card_Game.DTD cargado correctamente')
         dtd_charged = True
         return dtd
-    #  Si el dtd no es correcto le indicamos que el dtd no ha sido cargado correctamente
     except DTDParseError:
         print('ERROR: IETI_Card_Game.DTD no encontrado en el directorio config')
 
 
-#  La función intenta cargar la baraja del usuario
-def charge_user_deck(dtd):
-    #  Cargamos una variable en estado global para nuestra baraja
-    global user_deck_charged
-    #  Intentaremos cargar el mazo del usuario con este try y validarlo contra el dtd
+def charge_deck(dtd, user):
     try:
-        #  Intentamos cargar el xml y mostramos si se ha cargado correctamente
-        user_deck = etree.parse('decks/myBaraja.xml')
-        user_deck_charged = True
-        print('INFO: myBaraja.xml cargado correctamente')
-        try:
-            #  Si se ha cargado correctamente, intenta validar contra el dtd
-            if dtd.validate(user_deck) is True:
-                print('INFO: myBaraja.xml validado correctamente')
-                #  Devuelve nuestra baraja ya validada
-                return user_deck
-        #  Creamos excepciones para indicar cuando hay errores al validar el dtd con el xml
-        except NameError:
-            print('ERROR: No ha sido posible validar myBaraja.xml')
-            user_deck_charged = False
-        except AttributeError:
-            print('ERROR: No ha sido posible validar myBaraja.xml')
-            user_deck_charged = False
-    #  La baraja no carga correctamente y mostramos el error conforme no aparece en el directorio selecionado
+        if user == 'user':
+            global user_deck_charged
+            user_deck = etree.parse('decks/myBaraja.xml')
+            user_deck_charged = True
+            print('INFO: myBaraja.xml cargado correctamente')
+            try:
+                if dtd.validate(user_deck) is True:
+                    print('INFO: myBaraja.xml validado correctamente')
+                    return user_deck
+            except NameError:
+                print('ERROR: No ha sido posible validar myBaraja.xml')
+                user_deck_charged = False
+                return None
+            except AttributeError:
+                print('ERROR: No ha sido posible validar myBaraja.xml')
+                user_deck_charged = False
+                return None
+        elif user == 'enemy':
+            global enemy_deck_charged
+            enemy_deck = etree.parse('decks/Enemigo.xml')
+            enemy_deck_charged = True
+            print('INFO: Enemigo.xml cargado correctamente')
+            try:
+                if dtd.validate(enemy_deck) is True:
+                    print('INFO: Enemigo.xml validado correctamente')
+                    return enemy_deck
+            except NameError:
+                print('ERROR: No ha sido posible validar Enemigo.xml')
+                enemy_deck_charged = False
+                return None
+            except AttributeError:
+                print('ERROR: No ha sido posible validar Enemigo.xml')
+                enemy_deck_charged = False
+                return None
     except OSError:
-        print('ERROR: myBaraja.xml no encontrado en el directorio decks')
-
-
-#  La función valida la baraja enemiga
-def charge_enemy_deck(dtd):
-    # Cargamos una variable en estado global para la baraja enemiga
-    global enemy_deck_charged
-    # Intentaremos cargar el mazo del usuario con este try y validarlo contra el dtd
-    try:
-        # Comprobamos que la baraja enemiga cargue correctamente
-        enemy_deck = etree.parse('decks/Enemigo.xml')
-        enemy_deck_charged = True
-        print('INFO: Enemigo.xml cargado correctamente')
-        try:
-            # Comprobamos que la baraja enemiga carga con el dtd
-            if dtd.validate(enemy_deck) is True:
-                print('INFO: Enemigo.xml validado correctamente')
-                return enemy_deck
-        # Creamos excepciones para indicar cuando hay errores al validar el dtd con el xml
-        except NameError:
-            print('ERROR: No ha sido posible validar Enemigo.xml')
-            enemy_deck_charged = False
-        except AttributeError:
-            print('ERROR: No ha sido posible validar Enemigo.xml')
-            enemy_deck_charged = False
-    # La baraja no carga correctamente y mostramos el error conforme no aparece en el directorio selecionado
-    except OSError:
-        print('ERROR: Enemigo.xml no encontrado en el directorio decks')
-
-
+        if user == 'user':
+            print('ERROR: myBaraja.xml no encontrado en el directorio decks')
+        elif user == 'enemy':
+            print('ERROR: Enemigo.xml no encontrado en el directorio decks')
+        return None
