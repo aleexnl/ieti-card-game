@@ -88,7 +88,7 @@ def user_deck_charged():
     global user_deck
     global enemy_deck
     while True:
-        if userinfo.enemy_deck_charged is True:
+        if userinfo.enemy_deck_charged is True or len(battles.user_active_deck) == 10:
             break
         print('1. Cargar cartas')
         print('2. Carga cartas Enemigo')
@@ -166,6 +166,8 @@ def all_decks_charged():
     global user_deck
     global enemy_deck
     while True:
+        if len(battles.user_active_deck) == 10:
+            break
         print('1. Cargar cartas')
         print('2. Carga cartas Enemigo')
         print('3. Crear mazo aleatorio')
@@ -201,6 +203,60 @@ def all_decks_charged():
                 battles.enemy_active_deck = cards.defensive_deck(enemy_deck)
             elif opc == 10:
                 battles.enemy_active_deck = cards.balanced_deck(enemy_deck)
+            else:
+                print('ERROR: Seleccion no esperada. Contacta con el desarrollador.')
+        except ValueError:
+            print('ERROR: Solo introduce numeros')
+
+
+def no_pvp_menu():
+    """Full menu of the game, every option is available."""
+    global user_deck
+    global enemy_deck
+    while True:
+        if len(battles.enemy_active_deck) == 10:
+            break
+        print('1. Cargar cartas')
+        print('2. Carga cartas Enemigo')
+        print('3. Crear mazo aleatorio')
+        print('4. Crear mazo ofensivo')
+        print('5. Crear mazo defensivo')
+        print('6. Crear mazo equilibrado')
+        print('7. Crear mazo aleatorio Enemigo')
+        print('8. Crear mazo ofensivo Enemigo')
+        print('9. Crear mazo defensivo Enemigo')
+        print('10. Crear mazo equilibrado Enemigo')
+        print('11. Luchar Jugador vs Bot (arcade)')
+        print('12. Luchar Jugador vs Bot (liga)')
+        print('ESCOJE UNA OPCIÓN: ', end='')
+        try:
+            opc = int(input())
+            if opc not in range(1, 13):
+                print('ERROR: Introduce una opcion en el menu')
+            elif opc == 1:
+                user_deck = userinfo.charge_deck(dtd_file, user='user')
+            elif opc == 2:
+                enemy_deck = userinfo.charge_deck(dtd_file, user='enemy')
+            elif opc == 3:
+                battles.user_active_deck = cards.random_deck(user_deck)
+            elif opc == 4:
+                battles.user_active_deck = cards.offensive_deck(user_deck)
+            elif opc == 5:
+                battles.user_active_deck = cards.defensive_deck(user_deck)
+            elif opc == 6:
+                battles.user_active_deck = cards.balanced_deck(user_deck)
+            elif opc == 7:
+                battles.enemy_active_deck = cards.random_deck(enemy_deck)
+            elif opc == 8:
+                battles.enemy_active_deck = cards.offensive_deck(enemy_deck)
+            elif opc == 9:
+                battles.enemy_active_deck = cards.defensive_deck(enemy_deck)
+            elif opc == 10:
+                battles.enemy_active_deck = cards.balanced_deck(enemy_deck)
+            elif opc == 11:
+                print('ERROR: Opción no disponible')
+            elif opc == 12:
+                print('ERROR: Opción no disponible')
             else:
                 print('ERROR: Seleccion no esperada. Contacta con el desarrollador.')
         except ValueError:
