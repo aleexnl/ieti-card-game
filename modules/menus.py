@@ -73,11 +73,11 @@ def all_menu():
             elif opc == 10:
                 battles.enemy_active_deck = cards.balanced_deck(enemy_deck)
             elif opc == 11:
-                print('ERROR: Opción no disponible')
+                battles.player_vs_player(battles.user_active_deck, battles.enemy_active_deck)
             elif opc == 12:
-                print('ERROR: Opción no disponible')
+                battles.player_vs_bot(battles.user_active_deck)
             elif opc == 13:
-                print('ERROR: Opción no disponible')
+                battles.player_vs_bot_league(battles.user_active_deck)
             else:
                 print('ERROR: Seleccion no esperada. Contacta con el desarrollador.')
         except ValueError:
@@ -254,9 +254,9 @@ def no_pvp_menu():
             elif opc == 10:
                 battles.enemy_active_deck = cards.balanced_deck(enemy_deck)
             elif opc == 11:
-                print('ERROR: Opción no disponible')
+                battles.player_vs_bot(battles.user_active_deck)
             elif opc == 12:
-                print('ERROR: Opción no disponible')
+                battles.player_vs_bot_league(battles.user_active_deck)
             else:
                 print('ERROR: Seleccion no esperada. Contacta con el desarrollador.')
         except ValueError:
