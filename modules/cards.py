@@ -41,7 +41,7 @@ def random_deck(deck):  # Function to create a random deck.
             random_numbers.append(random_number)
     for number in random_numbers:  # TODO: Change the function random_deck() to use the same algorithm as the other ones
         card_info = deck.xpath("//card[" + str(number) + "]")
-        name = deck.xpath("//card[" + str(number) + "]/name")
+        name = deck.xpath("//card   [" + str(number) + "]/name")
         desc = deck.xpath("//card[" + str(number) + "]/description")
         atk = deck.xpath("//card[" + str(number) + "]/attack")
         defense = deck.xpath("//card[" + str(number) + "]/defense")
@@ -116,4 +116,23 @@ def balanced_deck(deck):  # Function to create balanced decks
             card = Card(card.get('summonPoints'), card.get('type'),
                         name[0].text, desc[0].text, atk[0].text, defense[0].text)
             card.show_card()
+            cards.append(card)
+
+def balanced_deck(deck):
+    cards = []
+    if deck.xpath('count(//name)') < 20:
+        print('ERROR: No hay un minimo de 20 cartas.')
+        return cards
+    for attack in range(5, -1, -1):
+        for defense in range(5, -1, -1):
+            selected_card = deck.xpath('/PlayerConfig/deck/card[attack[.=' + str(attack) + ']]') and \
+                            deck.xpath('/PlayerConfig/deck/card[defense[.=' + str(defense) + ']]')
+            if len(cards) == 10:
+                return cards
+            name = card.xpath("name")
+            desc = card.xpath("description")
+            atk = card.xpath("attack")
+            defense = card.xpath("defense")
+            card = Card(card.get('summonPoints'), card.get('type'),
+                        name[0].text, desc[0].text, atk[0].text, defense[0].text)
             cards.append(card)
