@@ -15,6 +15,7 @@ class Card:
         self.defense_points = defense
 
     def show_card(self):  # Method to show the user the card information.
+        # TODO: Function trim() to erase \n in strings
         print("Cost: {} Type: {} Name: {} Atk: {} Def: {}"
               .format(self.summon_points, self.card_type, self.name, self.attack_points, self.defense_points))
 
