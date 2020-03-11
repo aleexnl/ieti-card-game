@@ -6,19 +6,20 @@ enemy_active_deck = []
 
 
 def summon_phase(deck, field, summon_points=5):
-    while summon_points > 0:
-        available_cards = 0
-        random_card = random.randrange(0, 10)
-        field.append(deck[random_card])
-        del deck[random_card]
-        summon_points -= int(field[0].summon_points)
+    random_card = random.randrange(0, 10)
+    summon_points -= int(deck[random_card].summon_points)
+    field.append(deck[random_card])
+    while summon_points != 0:
+        available_cards = []
         for card in deck:
-            if int(card.summon_points) < summon_points:
-                available_cards += 1
-        else:
-            if available_cards == 0:
-                break
-        return field
+            if summon_points - int(card.summon_points) >= 0:
+                available_cards.append(card)
+        if len(available_cards) == 0:
+            break
+        random_card = random.randrange(0, len(available_cards))
+        summon_points -= int(available_cards[random_card].summon_points)
+        field.append(available_cards[random_card])
+    return field
 
 
 def player_vs_player(user_deck, enemy_deck):
@@ -27,7 +28,6 @@ def player_vs_player(user_deck, enemy_deck):
     while user_life or enemy_life > 0:
         user_field = summon_phase(user_deck, user_field)
         enemy_field = summon_phase(enemy_deck, enemy_field)
-        break
 
 
 def player_vs_bot(user_deck):
