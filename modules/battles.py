@@ -6,6 +6,7 @@ enemy_active_deck = []
 
 
 def summon_phase(deck, field, summon_points=5):
+    """Function to execute the summoning phase."""
     random_card = random.randrange(0, 10)
     summon_points -= int(deck[random_card].summon_points)
     field.append(deck[random_card])
@@ -24,10 +25,16 @@ def summon_phase(deck, field, summon_points=5):
 
 def player_vs_player(user_deck, enemy_deck):
     user_life, enemy_life = 10, 10
-    user_field, enemy_field = [], []
     while user_life or enemy_life > 0:
+        user_field, enemy_field = [], []
         user_field = summon_phase(user_deck, user_field)
+        print('User ha invocado a las siguientes cartas:')
+        for card in user_field:
+            card.get_card()
         enemy_field = summon_phase(enemy_deck, enemy_field)
+        print('Enemigo ha invocado a las siguientes cartas:')
+        for card in user_field:
+            card.get_card()
 
 
 def player_vs_bot(user_deck):
