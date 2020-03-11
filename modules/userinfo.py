@@ -6,19 +6,20 @@ user_deck_charged = False  # Global boolean to check if the user xml is successf
 enemy_deck_charged = False  # Global boolean to check if the enemy xml is successful charged in memory.
 
 
-def charge_dtd():  # Function used to charge the xml dtd validator.
-    global dtd_charged  # Charge the global variable to change its condition .
-    # Try to charge the dtd, if not it will catch the exception and warn the user about.
+def charge_dtd():
+    """Function that charges the dtd to validate xml."""
+    global dtd_charged
     try:
-        dtd = etree.DTD('config/IETI_Card_Game.DTD')
+        dtd = etree.DTD('config/IETI_Card_Game.DTD')  # Charge dtd into a variable.
         print('INFO: IETI_Card_Game.DTD cargado correctamente')
         dtd_charged = True
         return dtd
-    except DTDParseError:
+    except DTDParseError:  # Error about dtd not found.
         print('ERROR: IETI_Card_Game.DTD no encontrado en el directorio config')
 
-# TODO: Optimize function with 1 more argument: enemy or ally.
+
 def charge_deck(dtd, user):
+    """This function is used to charge neither the user or enemy deck."""
     try:
         if user == 'user':
             global user_deck_charged

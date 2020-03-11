@@ -1,5 +1,6 @@
 from modules import menus, userinfo
-while True:  # Infinite bucle to always shot menus after iterating with options in them.
+while True:
+    # Infinite bucle to always shot menus after iterating with options in them.
     # This conditionals check if the decks are charged or not and depending on the boolean returned, it will show more
     # or less options to the user.
     if userinfo.user_deck_charged is False and userinfo.enemy_deck_charged is False:
