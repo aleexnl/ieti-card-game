@@ -13,8 +13,9 @@ def summon_phase(deck, field, summon_points=5):
     while summon_points != 0:
         available_cards = []
         for card in deck:
-            if summon_points - int(card.summon_points) >= 0:
-                available_cards.append(card)
+            if card not in field:
+                if summon_points - int(card.summon_points) >= 0:
+                    available_cards.append(card)
         if len(available_cards) == 0:
             break
         random_card = random.randrange(0, len(available_cards))
