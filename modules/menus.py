@@ -75,7 +75,7 @@ def all_menu():
             elif opc == 11:
                 battles.player_vs_player(battles.user_active_deck, battles.enemy_active_deck)
             elif opc == 12:
-                battles.player_vs_bot(battles.user_active_deck)
+                battles.player_vs_bot(battles.user_active_deck, bot_deck=cards.random_deck(user_deck))
             elif opc == 13:
                 battles.player_vs_bot_league(battles.user_active_deck)
             else:
@@ -254,7 +254,7 @@ def no_pvp_menu():
             elif opc == 10:
                 battles.enemy_active_deck = cards.balanced_deck(enemy_deck)
             elif opc == 11:
-                battles.player_vs_bot(battles.user_active_deck)
+                battles.player_vs_bot(battles.user_active_deck, bot_deck=cards.random_deck(user_deck))
             elif opc == 12:
                 battles.player_vs_bot_league(battles.user_active_deck)
             else:
