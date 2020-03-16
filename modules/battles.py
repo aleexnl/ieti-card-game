@@ -6,9 +6,12 @@ enemy_active_deck = []
 
 def summon_phase(deck, field, summon_points=5):
     """Function to execute the summoning phase."""
-    random_card = random.randrange(0, 10)
-    summon_points -= int(deck[random_card].summon_points)
-    field.append(deck[random_card])
+    random_card = random.randrange(0, 10)  # Generate random number
+    summon_points -= int(deck[random_card].summon_points)  # Get random card summon points and sub them to actual points
+    field.append(deck[random_card])  # Add card to field
+    # This while will be executed while we have summon points: It will search available cards and create a list with
+    # them and, select one of them randomly. It will stop doing this when summon points are 0 or no available cards in
+    # the list.
     while summon_points != 0:
         available_cards = []
         for card in deck:
@@ -25,25 +28,29 @@ def summon_phase(deck, field, summon_points=5):
 
 def target_phase():
     """Function to decide the first to battle."""
-    x = random.randint(1, 2)
+    x = random.randint(1, 2)  # Generate a coin with 1 or 2.
     return x
 
 
 def battle_phase(coin, player_1_hp, player_1_field, player_2_hp, player_2_field):
     """Function to execute the battle phase."""
+    # This if is for UX purposes
     if coin == 1:
         player = 'User'
         player_2 = 'Enemigo'
     else:
         player = 'Enemigo'
         player_2 = 'User'
+    # This for will go among all the user cards trying to fight another card in the same list position. If there is no
+    # card at the other position it will do a direct attack.
     for card_number in range(len(player_1_field)):
         player_1_card = player_1_field[card_number]
         print('Va a atacar', player_1_card.name, 'de tipo', player_1_card.card_type
               , 'con ataque', player_1_card.attack_points)
-        try:
+        try:  # Try yo search a card in the same position.
             player_2_card = player_2_field[card_number]
             print(player_2_card.name, 'defenderá con una defensa de valor', player_2_card.defense_points)
+            # This if checks if there is any type advantage.
             if player_1_card.card_type == 'infantry' and player_2_card.card_type == 'lancer':
                 print(player_1_card.name, 'tiene una ventaja de tipo; su ataque será de'
                       , int(player_1_card.attack_points) * 2)
@@ -60,6 +67,7 @@ def battle_phase(coin, player_1_hp, player_1_field, player_2_hp, player_2_field)
                 print('No hay ventajas de tipo')
                 buff = False
             print(player_1_card.name, 'va a atacar a', player_2_card.name)
+            # This if calculates the battle damage if there is a type buff.
             if buff is True:
                 if int(player_2_card.defense_points) - (int(player_1_card.attack_points) * 2) >= 0:
                     print('¡', player_2_card.name, 'ha defendido con exito!')
@@ -85,7 +93,7 @@ def battle_phase(coin, player_1_hp, player_1_field, player_2_hp, player_2_field)
                     player_2_field.remove(player_2_field[card_number])
                     if player_2_hp <= 0:
                         return player_1_hp, player_1_field, player_2_hp, player_2_field
-        except IndexError:
+        except IndexError:  # If there is no card, direct attack
             print(player_2, 'no tiene cartas para defender!')
             print('¡', player_1_card.name, 'hará un ataque directo!')
             player_2_hp -= int(player_1_card.attack_points)
@@ -100,12 +108,13 @@ def battle_phase(coin, player_1_hp, player_1_field, player_2_hp, player_2_field)
 def player_vs_player(user_deck, enemy_deck):
     """Function to do a player vs player battle."""
     user_life, enemy_life = 10, 10
-    shift = 1
+    shift = 1  # Shift counter
     while user_life and enemy_life > 0:
+        # UX prints
         print('Turno:', shift)
         print('Vida de usuario:', user_life)
         print('Vida de enemigo:', enemy_life)
-        user_field, enemy_field = [], []
+        user_field, enemy_field = [], []  # Field definition
         user_field = summon_phase(user_deck, user_field)
         print('User ha invocado a las siguientes cartas:')
         for card in user_field:
@@ -161,7 +170,7 @@ def player_vs_bot(user_deck, bot_deck):
         print('User ha invocado a las siguientes cartas:')
         for card in user_field:
             card.get_card()
-        enemy_field = summon_phase(bot_deck, bot_field)
+        bot_field = summon_phase(bot_deck, bot_field)
         print('El Bot ha invocado a las siguientes cartas:')
         for card in bot_field:
             card.get_card()
