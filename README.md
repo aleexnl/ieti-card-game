@@ -1,6 +1,14 @@
+**Note:** _This version its not supported anymore._
+
 # IETI-Card-Game-G2
-IETI Card Game es un juego de cartas fantástico basado en los juegos estilo POKEMON, HEARTHSTONE, etc... El juego permite leer cartas en formato XML, crear mazos y luchar. Las luchas son automáticas siguiendo unas reglas básicas explicadas en un apartado posterior.
-## Componentes del grupo
+
+#### Version 1
+
+IETI Card Game its a card game based on the game system like _Pokemon_, _Hearthstone_, _Legends of Runaterra_, etc.
+The game stores the cards in a xml file that, after loading the game, it goes against a dtd that checks if the deck is valid or not, allowing all users creating their favorite decks.
+
+## Contributors
+
 - Iker Fuentes Neira
 - Sergio de la Torre Rins
 - Alejandro Nieto Luque
