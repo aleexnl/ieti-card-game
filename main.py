@@ -13,7 +13,18 @@ def checkSystem():
         init()
 
 
-def dbConnect():
+def checkDatabase():
+    if path.exists('config/database.db'):
+        print(infMsg + "Found database, connecting...")
+        return databaseConnect()
+    else:
+        print(errMsg + "Database not found. Exiting")
+        if system() == 'Windows':
+            deinit()
+        exit()
+
+
+def databaseConnect():
     db = sqlite3.connect('config/database.db')
     print(sysMsg + "Successfully Connected to database")
     return db
@@ -22,14 +33,7 @@ def dbConnect():
 def main():
     checkSystem()  # Needed to initiate colorama in case we are using Windows
     print(sysMsg + 'Seaching database...')
-    if path.exists('/config/database.db'):
-        print(infMsg + "Found database, connecting...")
-        dbConnection = dbConnect()
-    else:
-        print(errMsg + "Database not found. Exiting")
-        if system() == 'Windows':
-            deinit()
-        exit()
+    databaseConnection = checkDatabase
 
 
 main()
