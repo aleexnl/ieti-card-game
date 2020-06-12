@@ -8,6 +8,8 @@ errMsg = Style.BRIGHT + Fore.RED + '[ERROR] ' + Style.RESET_ALL
 warMsg = Style.BRIGHT + Fore.YELLOW + '[WARNING] ' + Style.RESET_ALL
 usrMsg = Style.BRIGHT + Fore.CYAN + '[USER]: ' + Style.RESET_ALL
 
+database = None  # Variable to store the database connection.
+
 
 def checkSystem():
     """
@@ -18,6 +20,7 @@ def checkSystem():
 
 
 def checkDatabase():
+    global database
     """
     Function to check if the database file exists in the
     specified folder.
@@ -25,7 +28,7 @@ def checkDatabase():
     if path.exists('database.db'):
         print(infMsg + "Found database")
         print(sysMsg + "Connecting...")
-        return databaseConnect()  # return the value of the database connection
+        database = databaseConnect()  # return the value of the database connection
     else:
         print(errMsg + "Database not found!")
         print(warMsg + "Exiting...")
