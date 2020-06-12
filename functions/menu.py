@@ -2,7 +2,7 @@ from . import system
 from colorama import Style
 
 
-def mainMenu():
+def userMenu():
     while True:
         print(system.infMsg + Style.BRIGHT +
               "SELECT AN OPTION:" + Style.RESET_ALL)

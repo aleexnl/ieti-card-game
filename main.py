@@ -7,7 +7,7 @@ def main():
     osSystem('cls' if osName == 'nt' else 'clear')
     print(system.sysMsg + 'Seaching database...')
     databaseConnection = system.checkDatabase()  # Call database connection
-    menu.mainMenu()
+    menu.userMenu()
 
 
 main()
