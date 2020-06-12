@@ -12,8 +12,8 @@ def checkSystem():
     """
     Function to check the system where the script is running.
     """
-    if name == 'nt':  # Checks if system is Windows
-        init()  # Execute colorama in windows
+    if name == 'nt':  # Checks if system is Windows.
+        init()  # Execute colorama in windows.
 
 
 def checkDatabase():
@@ -35,16 +35,21 @@ def checkDatabase():
 
 def databaseConnect():
     """
-    Function to establish the database connection with SQLite3
+    Function to establish the database connection with SQLite3.
     """
     db = sqlite3.connect('database.db')
     print(infMsg + "Successfully connected to database" + "\n")
     return db
 
 
-def checkOption(option):
-    menuFunctions = {1: "Create a new User", 2: "Load User",
-                     3: "Delete User", 4: "Show Users"}
+def checkOption(option, menu):
+    """
+    Function to check if the option given by the user exists in the menu.
+    """
     if option.upper() == "Q":
         print(sysMsg + "Exiting.")
         exit()
+    elif option in menu:
+        menu[option]()
+    else:
+        print(infMsg + "Option not found, please input a valid option.")
