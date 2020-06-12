@@ -5,6 +5,7 @@ from colorama import init, deinit, Fore, Style
 sysMsg = Style.BRIGHT + Fore.BLUE + '[SYSTEM] ' + Style.RESET_ALL
 infMsg = Style.BRIGHT + Fore.GREEN + '[INFO] ' + Style.RESET_ALL
 errMsg = Style.BRIGHT + Fore.RED + '[ERROR] ' + Style.RESET_ALL
+warMsg = Style.BRIGHT + Fore.YELLOW + '[WARNING] ' + Style.RESET_ALL
 usrMsg = Style.BRIGHT + Fore.CYAN + '[USER]: ' + Style.RESET_ALL
 
 
@@ -52,4 +53,4 @@ def checkOption(option, menu):
     elif option in menu:
         menu[option]()
     else:
-        print(infMsg + "Option not found, please input a valid option.")
+        print(warMsg + "Option not found, please input a valid option.")
