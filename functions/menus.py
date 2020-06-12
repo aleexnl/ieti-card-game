@@ -3,8 +3,8 @@ from colorama import Style
 
 
 def userMenu():
-    menuFunctions = {"1": "", "2": menu_options.createUser,
-                     "3": "Delete User", "4": "Show Users"}
+    menu = {"1": menu_options.loadUser, "2": menu_options.createUser,
+            "3": menu_options.deleteUser, "4": menu_options.showUsers}
     while True:
         print(system.infMsg + Style.BRIGHT +
               "SELECT AN OPTION:" + Style.RESET_ALL)
@@ -15,4 +15,4 @@ def userMenu():
         print("[Q]. Quit")
         option = str(input(system.usrMsg))  # Input user option of the menu
         # Check option and menu options
-        system.checkOption(option, menuFunctions)
+        system.checkOption(option, menu)
