@@ -28,7 +28,7 @@ def checkDatabase():
         return databaseConnect()  # return the value of the database connection
     else:
         print(errMsg + "Database not found!")
-        print(infMsg + "Exiting...")
+        print(warMsg + "Exiting...")
         if name == 'nt':
             deinit()
         exit()
@@ -48,9 +48,9 @@ def checkOption(option, menu):
     Function to check if the option given by the user exists in the menu.
     """
     if option.upper() == "Q":
-        print(sysMsg + "Exiting.")
+        print(warMsg + "Exiting.")
         exit()
     elif option in menu:
-        menu[option]()
+        menu[option]()  # Call option
     else:
         print(warMsg + "Option not found, please input a valid option.")
