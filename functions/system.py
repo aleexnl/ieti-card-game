@@ -1,15 +1,14 @@
 import sqlite3
-from os import path
-from platform import system
+from os import path, name
 from colorama import init, deinit, Fore, Style
 
-sysMsg = Fore.BLUE + '[SYSTEM] ' + Style.RESET_ALL
-infMsg = Fore.GREEN + '[INFO] ' + Style.RESET_ALL
-errMsg = Fore.RED + '[ERROR] ' + Style.RESET_ALL
+sysMsg = Style.BRIGHT + Fore.BLUE + '[SYSTEM] ' + Style.RESET_ALL
+infMsg = Style.BRIGHT + Fore.GREEN + '[INFO] ' + Style.RESET_ALL
+errMsg = Style.BRIGHT + Fore.RED + '[ERROR] ' + Style.RESET_ALL
 
 
 def checkSystem():
-    if system() == 'Windows':
+    if name == 'nt':  # Checks if system is Windows
         init()
 
 
@@ -19,12 +18,12 @@ def checkDatabase():
         return databaseConnect()
     else:
         print(errMsg + "Database not found. Exiting")
-        if system() == 'Windows':
+        if name == 'nt':
             deinit()
         exit()
 
 
 def databaseConnect():
     db = sqlite3.connect('database.db')
-    print(sysMsg + "Successfully Connected to database")
+    print(sysMsg + "Successfully connected to database")
     return db
