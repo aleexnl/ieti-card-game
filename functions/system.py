@@ -9,15 +9,22 @@ usrMsg = Style.BRIGHT + Fore.CYAN + '[USER]: ' + Style.RESET_ALL
 
 
 def checkSystem():
+    """
+    Function to check the system where the script is running.
+    """
     if name == 'nt':  # Checks if system is Windows
-        init()
+        init()  # Execute colorama in windows
 
 
 def checkDatabase():
+    """
+    Function to check if the database file exists in the
+    specified folder.
+    """
     if path.exists('database.db'):
         print(infMsg + "Found database")
         print(sysMsg + "Connecting...")
-        return databaseConnect()
+        return databaseConnect()  # return the value of the database connection
     else:
         print(errMsg + "Database not found!")
         print(infMsg + "Exiting...")
@@ -27,6 +34,9 @@ def checkDatabase():
 
 
 def databaseConnect():
+    """
+    Function to establish the database connection with SQLite3
+    """
     db = sqlite3.connect('database.db')
     print(infMsg + "Successfully connected to database" + "\n")
     return db
