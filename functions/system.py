@@ -42,7 +42,7 @@ def database_connect():
     Function to establish the database connection with SQLite3.
     """
     db = sqlite3.connect('database.db')
-    print(infMsg + "Successfully connected to database" + "\n")
+    print(infMsg + "Successfully connected to database")
     return db
 
 

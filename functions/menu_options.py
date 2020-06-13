@@ -1,4 +1,5 @@
 from . import system
+from colorama import Style, Fore
 
 
 def load_user():
@@ -17,5 +18,5 @@ def show_users():
     result = system.exec_query(
         system.database, "SELECT username, points FROM users")
     for row in result:
-        print("User: {0}".format(row[0]), end="\t")
-        print("Points: {0}".format(row[1]))
+        print(Style.BRIGHT + Fore.MAGENTA + "User: " + Style.RESET_ALL + "{0}".format(row[0]), end="\t")
+        print(Style.BRIGHT + Fore.MAGENTA + "Points: " + Style.RESET_ALL + "{0}".format(row[1]))

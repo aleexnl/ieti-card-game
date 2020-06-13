@@ -6,7 +6,7 @@ def user_menu():
     menu = {"1": menu_options.load_user, "2": menu_options.create_user,
             "3": menu_options.delete_user, "4": menu_options.show_users}
     while True:
-        print(system.infMsg + Style.BRIGHT +
+        print("\n" + system.infMsg + Style.BRIGHT +
               "SELECT AN OPTION:" + Style.RESET_ALL)
         print("1. Load an user")
         print("2. Create a new user")
