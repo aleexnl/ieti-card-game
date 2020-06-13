@@ -20,11 +20,11 @@ def check_system():
 
 
 def check_database():
-    global database
     """
     Function to check if the database file exists in the
     specified folder.
     """
+    global database
     if path.exists('database.db'):
         print(infMsg + "Found database")
         print(sysMsg + "Connecting...")
@@ -60,6 +60,10 @@ def check_option(option, menu):
 
 
 def exec_query(db, query):
+    """
+    Function to execute query.
+    It may disappear depending on project's evolution.
+    """
     cursor = db.cursor()
     cursor.execute(query)
     return cursor.fetchall()

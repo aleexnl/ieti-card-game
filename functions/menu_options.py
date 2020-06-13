@@ -15,6 +15,9 @@ def delete_user():
 
 
 def show_users():
+    """
+    Function to get users and points from the database.
+    """
     result = system.exec_query(
         system.database, "SELECT username, points FROM users")
     for row in result:
