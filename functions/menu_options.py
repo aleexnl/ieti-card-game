@@ -14,8 +14,8 @@ def delete_user():
 
 
 def show_users():
-    rows = system.exec_query(
+    result = system.exec_query(
         system.database, "SELECT username, points FROM users")
-    for row in rows:
+    for row in result:
         print("User: {0}".format(row[0]), end="\t")
         print("Points: {0}".format(row[1]))
