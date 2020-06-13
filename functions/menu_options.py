@@ -1,17 +1,21 @@
 from . import system
 
 
-def loadUser():
+def load_user():
     pass
 
 
-def createUser():
+def create_user():
     pass
 
 
-def deleteUser():
+def delete_user():
     pass
 
 
-def showUsers():
-    pass
+def show_users():
+    rows = system.exec_query(
+        system.database, "SELECT username, points FROM users")
+    for row in rows:
+        print("User: {0}".format(row[0]), end="\t")
+        print("Points: {0}".format(row[1]))

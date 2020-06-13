@@ -11,7 +11,7 @@ usrMsg = Style.BRIGHT + Fore.CYAN + '[USER]: ' + Style.RESET_ALL
 database = None  # Variable to store the database connection.
 
 
-def checkSystem():
+def check_system():
     """
     Function to check the system where the script is running.
     """
@@ -19,7 +19,7 @@ def checkSystem():
         init()  # Execute colorama in windows.
 
 
-def checkDatabase():
+def check_database():
     global database
     """
     Function to check if the database file exists in the
@@ -28,7 +28,7 @@ def checkDatabase():
     if path.exists('database.db'):
         print(infMsg + "Found database")
         print(sysMsg + "Connecting...")
-        database = databaseConnect()  # return the value of the database connection
+        database = database_connect()  # return the value of the database connection
     else:
         print(errMsg + "Database not found!")
         print(warMsg + "Exiting...")
@@ -37,7 +37,7 @@ def checkDatabase():
         exit()
 
 
-def databaseConnect():
+def database_connect():
     """
     Function to establish the database connection with SQLite3.
     """
@@ -46,7 +46,7 @@ def databaseConnect():
     return db
 
 
-def checkOption(option, menu):
+def check_option(option, menu):
     """
     Function to check if the option given by the user exists in the menu.
     """
@@ -59,7 +59,7 @@ def checkOption(option, menu):
         print(warMsg + "Option not found, please input a valid option.")
 
 
-def execQuery(database, query):
-    cursor = database.cursor()
+def exec_query(db, query):
+    cursor = db.cursor()
     cursor.execute(query)
     return cursor.fetchall()

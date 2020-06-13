@@ -2,9 +2,9 @@ from . import system, menu_options
 from colorama import Style
 
 
-def userMenu():
-    menu = {"1": menu_options.loadUser, "2": menu_options.createUser,
-            "3": menu_options.deleteUser, "4": menu_options.showUsers}
+def user_menu():
+    menu = {"1": menu_options.load_user, "2": menu_options.create_user,
+            "3": menu_options.delete_user, "4": menu_options.show_users}
     while True:
         print(system.infMsg + Style.BRIGHT +
               "SELECT AN OPTION:" + Style.RESET_ALL)
@@ -15,4 +15,4 @@ def userMenu():
         print("[Q]. Quit")
         option = str(input(system.usrMsg))  # Input user option of the menu
         # Check option and menu options
-        system.checkOption(option, menu)
+        system.check_option(option, menu)
