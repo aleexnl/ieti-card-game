@@ -1,5 +1,5 @@
 import sqlite3
-from functions.system import infMsg, sysMsg
+from . import system
 
 
 def database_connect():
@@ -7,7 +7,7 @@ def database_connect():
     Function to establish the database connection with SQLite3.
     """
     db = sqlite3.connect('database.db')
-    print(infMsg + "Successfully connected to database")
+    print(system.infMsg + "Successfully connected to database")
     return db
 
 
@@ -28,8 +28,8 @@ def insert_new_user(db, values):
     """
     sql = "INSERT INTO users(username, points) VALUES(?,?);"
     cursor = db.cursor()
-    print(sysMsg + "Adding, user to database...")
+    print(system.sysMsg + "Adding, user to database...")
     cursor.execute(sql, values)
     db.commit()
-    print(infMsg + "User created correctly!")
+    print(system.infMsg + "User created correctly!")
     cursor.close()

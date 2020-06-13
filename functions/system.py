@@ -1,6 +1,6 @@
 from os import path, name
 from colorama import init, deinit, Fore, Style
-from functions.sql import database_connect
+from .sql import database_connect
 
 sysMsg = Style.BRIGHT + Fore.BLUE + '[System] ' + Style.RESET_ALL
 infMsg = Style.BRIGHT + Fore.GREEN + '[Info] ' + Style.RESET_ALL
