@@ -1,12 +1,12 @@
-import sqlite3
 from os import path, name
 from colorama import init, deinit, Fore, Style
+from functions.sql import database_connect
 
-sysMsg = Style.BRIGHT + Fore.BLUE + '[SYSTEM] ' + Style.RESET_ALL
-infMsg = Style.BRIGHT + Fore.GREEN + '[INFO] ' + Style.RESET_ALL
-errMsg = Style.BRIGHT + Fore.RED + '[ERROR] ' + Style.RESET_ALL
-warMsg = Style.BRIGHT + Fore.YELLOW + '[WARNING] ' + Style.RESET_ALL
-usrMsg = Style.BRIGHT + Fore.CYAN + '[USER]: ' + Style.RESET_ALL
+sysMsg = Style.BRIGHT + Fore.BLUE + '[System] ' + Style.RESET_ALL
+infMsg = Style.BRIGHT + Fore.GREEN + '[Info] ' + Style.RESET_ALL
+errMsg = Style.BRIGHT + Fore.RED + '[Error] ' + Style.RESET_ALL
+warMsg = Style.BRIGHT + Fore.YELLOW + '[Warning] ' + Style.RESET_ALL
+usrMsg = Style.BRIGHT + Fore.CYAN + 'User: ' + Style.RESET_ALL
 
 database = None  # Variable to store the database connection.
 
@@ -37,15 +37,6 @@ def check_database():
         exit()
 
 
-def database_connect():
-    """
-    Function to establish the database connection with SQLite3.
-    """
-    db = sqlite3.connect('database.db')
-    print(infMsg + "Successfully connected to database")
-    return db
-
-
 def check_option(option, menu):
     """
     Function to check if the option given by the user exists in the menu.
@@ -66,25 +57,3 @@ def check_str_input(string):
         return True
 
 
-def exec_query(db, query):
-    """
-    Function to execute query.
-    It may disappear depending on project's evolution.
-    """
-    cursor = db.cursor()
-    cursor.execute(query)
-    return cursor.fetchall()
-
-
-def insert_new_user(db, values):
-    """
-    Function to execute query.
-    It may disappear depending on project's evolution.
-    """
-    sql = "INSERT INTO users(username, points) VALUES(?,?);"
-    cursor = db.cursor()
-    print(sysMsg + "Adding, user to database...")
-    cursor.execute(sql, values)
-    db.commit()
-    print(infMsg + "User created correctly!")
-    cursor.close()
