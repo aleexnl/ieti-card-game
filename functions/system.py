@@ -57,3 +57,9 @@ def checkOption(option, menu):
         menu[option]()  # Call option
     else:
         print(warMsg + "Option not found, please input a valid option.")
+
+
+def execQuery(database, query):
+    cursor = database.cursor()
+    cursor.execute(query)
+    return cursor.fetchall()
