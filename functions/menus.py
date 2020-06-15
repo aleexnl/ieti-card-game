@@ -3,6 +3,7 @@ from . import system, menu_options
 
 
 def user_menu():
+    """User menu function. Shows option based on users."""
     menu = {"1": menu_options.load_user, "2": menu_options.create_user,
             "3": menu_options.delete_user, "4": menu_options.show_users}
     while True:
