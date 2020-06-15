@@ -51,6 +51,10 @@ def check_option(option, menu):
 
 
 def check_str_input(string):
+    """
+    Function to string if the users input is a valid string.
+    TODO: Add complete string validation.
+    """
     if len(string) <= 0:
         print(errMsg + "No text provided.")
     else:

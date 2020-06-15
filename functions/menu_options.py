@@ -1,25 +1,39 @@
-import functions.sql
-from . import system
 from colorama import Style, Fore
+import functions.sql as sql
+from . import system as sys
 
 
 def load_user():
-    pass
+    """
+    Function to load user from database.
+    """
+    while True:
+        print(sys.infMsg + "Please, type an username to load: ")
+        username = str(input(sys.usrMsg))
+        if sys.check_str_input(username) is True:
+            pass
+        else:
+            continue
 
 
 def create_user():
     """
     Function to create a new user in database.
-    TODO: Add more string validation.
     """
     while True:
-        print(system.infMsg + "Please, choose an username for the new user: ")
-        username = str(input(system.usrMsg))
-        functions.sql.insert_new_user(system.database, (username, 0)) if system.check_str_input(username) is True else next
-        break
+        print(sys.infMsg + "Please, choose an username for the new user: ")
+        username = str(input(sys.usrMsg))
+        if sys.check_str_input(username) is True:
+            sql.insert_new_user(sys.database, (username.lower(), 0))
+            break
+        else:
+            continue
 
 
 def delete_user():
+    """
+    Function to delete users from database.
+    """
     pass
 
 
@@ -27,7 +41,7 @@ def show_users():
     """
     Function to get users and points from the database.
     """
-    result = functions.sql.exec_query(system.database, "SELECT username, points FROM users")
+    result = sql.exec_query(sys.database, "SELECT username, points FROM users")
     print(Style.BRIGHT + Fore.MAGENTA + "Username", end="")
     print("Points".rjust(15) + Style.RESET_ALL)
     for row in result:
